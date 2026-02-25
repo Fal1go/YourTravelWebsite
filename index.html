@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourTravel - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-icon airplane" id="burger-menu">
+            <img src="https://img.icons8.com/ios-filled/50/1a2b48/airplane-take-off.png" alt="menu">
+        </div>
+        <div class="logo"><span>YOUR</span>TRAVEL</div>
+        <div class="nav-icon user" id="user-profile">
+            <img src="https://img.icons8.com/ios-filled/50/1a2b48/user-male-circle.png" alt="user">
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="hero-title" id = "heroTitle">Куда летим?</h1>
+        
+        <div class="search-container">
+            <div class="search-bar">
+                <img class = "search-icon" src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search">
+                <input type="search" placeholder="Найдем что-нибудь?">
+            </div>
+        </div>
+
+        <div class="country-grid">
+            <div class="card" onclick="goToCountry('kazakhstan')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193" alt="Kazakhstan">
+                </div>
+                <h2 class="card-title">КАЗАХСTАН</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc"><p>Казахстан — страна бескрайних степей, величественных гор и богатой культуры. Здесь древние традиции кочевников соседствуют с современными городами, а природа поражает Чарынским каньоном, Кольсайскими озёрами и Бурабаем. Гостей встречают с теплом, национальной кухней и живой музыкой, делая каждый визит незабываемым.</p></div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=500" alt="France">
+                </div>
+                <h2 class="card-title">ФРАНЦИЯ</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc"><p>Франция — страна романтики, искусства и гастрономии. От величественных улиц Парижа с Эйфелевой башней до живописной Провансской провинции, виноградников Бордо и солнечного Лазурного берега — Франция очаровывает своей культурой, кухней и историей.</p></div>            
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=500" alt="Maldives">
+                </div>
+                <h2 class="card-title">МАЛЬДИВЫ</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc"><p>Мальдивы — рай на Земле с белоснежными пляжами и лазурными лагунами. Этот архипелаг в Индийском океане идеально подходит для дайвинга, снорклинга и роскошного отдыха на воде, где каждый закат превращается в незабываемое зрелище.</p></div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=500" alt="Egypt">
+                </div>
+                <h2 class="card-title">ЕГИПЕТ</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc"><p>Египет — страна древней цивилизации и захватывающих историй. Пирамиды Гизы, храмовый комплекс Луксора, круизы по Нилу и песчаные пустыни делают Египет уникальным местом для путешествий, где история оживает на каждом шагу.</p></div>            
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1675975678457-d70708bf77c8?w=500" alt="Italy">
+                </div>
+                <h2 class="card-title">ИTАЛИЯ</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc">
+                    <p>Италия — страна искусства, истории и кулинарных шедевров. От величественного Колизея в Риме до романтики Венеции и живописных берегов Амальфи — Италия очаровывает своей культурой и гастрономией.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500" alt="Thailand">
+                </div>
+                <h2 class="card-title">TАЙЛАНД</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc">
+                    <p>Тайланд — страна экзотики, пляжей и храмов. От шумного Бангкока до спокойных островов Пхукета и Краби, Тайланд предлагает гостям приключения, великолепную кухню и уникальную культуру.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1557409518-691ebcd96038?w=500" alt="Japan">
+                </div>
+                <h2 class="card-title">ЯПОНИЯ</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc">
+                    <p>Япония — страна гармонии, технологий и традиций. От футуристических улиц Токио до сакуры в Киото и древних храмов — Япония сочетает современность с тысячелетней культурой.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500" alt="Australia">
+                </div>
+                <h2 class="card-title">АВСTРАЛИЯ</h2>
+                <div class="card-divider"></div>
+                <div class="card-desc">
+                    <p>Австралия — страна контрастов и приключений. От Красного центра и Великого Барьерного рифа до живописных пляжей Сиднея, Австралия предлагает уникальную природу и удивительные возможности для путешествий.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+    <p>© 2026 YourTravel | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
