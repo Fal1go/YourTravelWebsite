@@ -220,13 +220,13 @@ body {
     /* border: 2px solid black; */
     margin-bottom: 15px;
     padding: 15px 3%;
-    justify-items: center;
+    text-align: center;
     width: auto;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* --- СТРАНИЦА СТРАНЫ (КАЗАХСТАН) --- */
+/* --- СТРАНИЦА СТРАНЫ --- */
 
 /* --- Navbar СТРАНЫ --- */
 
@@ -248,23 +248,6 @@ body {
     width: 30px;
     cursor: pointer;
 }
-
-/* CENTER CONTAINER */
-/* .navbar .logo{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-} */
-
-/* logo style */
-/* .logo{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.logo span{
-    color: var(--navy);
-} */
 
 /* search bar (mini version inside navbar) */
 .mini-search{
