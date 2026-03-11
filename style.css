@@ -235,8 +235,6 @@ body {
 
 /* --- Navbar СТРАНЫ --- */
 
-
-
 .logo-search-container{
     gap: 20px;
     width: 100%;
@@ -249,10 +247,10 @@ body {
 }
 
 /* icons */
-.nav-icon img{
+/* .nav-icon img{
     width: 30px;
     cursor: pointer;
-}
+} */
 
 /* search bar (mini version inside navbar) */
 .mini-search{
@@ -301,7 +299,7 @@ body {
     display: flex;
     flex-direction: row; /* В ряд на десктопе */
     padding: 40px 5%;
-    gap: 30px;
+    gap: 50px;
     align-items: flex-start;
 }
 
@@ -315,7 +313,8 @@ body {
 }
 
 .main-country-title {
-    font-family: 'CamertonF';
+    font-family: var(--font-header);
+    font-weight: 400;
     font-size: clamp(3rem, 10vw, 6rem);
     line-height: 1;
     margin-bottom: 20px;
