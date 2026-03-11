@@ -20,15 +20,26 @@ const titles = [
 let randomIndex = Math.floor(Math.random() * titles.length);
 
 const heroTitle = document.getElementById('heroTitle');
-heroTitle.textContent = titles[randomIndex];
+if(heroTitle){
+    heroTitle.textContent = titles[randomIndex];
+}
+
+// Функционал иконок
+const burger = document.getElementById('burger-menu');
+const profile = document.getElementById('user-profile');
 
 // Бургер меню (иконка самолета)
-document.getElementById('burger-menu').addEventListener('click', () => {
-    alert('Меню открыто (здесь может быть ваш Sidebar)');
-});
+
+if(burger){
+    burger.addEventListener('click', () => {
+        alert('Меню открыто (здесь может быть ваш Sidebar)');
+    });
+}
 
 // Профиль пользователя
-document.getElementById('user-profile').addEventListener('click', () => {
-    alert('Переход в личный кабинет');
-    // window.location.href = 'profile.html';
-});
+if(profile){
+   profile.addEventListener('click', () => {
+        alert('Переход в личный кабинет');
+        // window.location.href = 'profile.html';
+    });
+}
