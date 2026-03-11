@@ -1,8 +1,6 @@
 // Переход на страницу страны
 function goToCountry(country) {
-    if(country === 'kazakhstan') {
-        window.location.href = 'country.html';
-    }
+    window.location.href = `country.html?country=${country}`;
 }
 
 // Свап тайтлов
@@ -52,3 +50,52 @@ if (logo){
         window.location.href = "index.html";
     });
 }
+
+
+
+// Get country from URL
+const params = new URLSearchParams(window.location.search);
+const countryName = params.get("country");
+
+// Load JSON file
+fetch('countries.json')
+  .then(res => res.json())
+  .then(data => {
+      if(countryName && data[countryName]) {
+          const country = data[countryName];
+
+          // Update page title
+          const titleElem = document.querySelector(".main-country-title");
+          if(titleElem) titleElem.textContent = country.title;
+
+          // Update description
+          const descElem = document.querySelector(".full-desc");
+          if(descElem) descElem.innerHTML = country.description;
+
+          // Update hero image
+          const imgElem = document.querySelector(".main-image-container img");
+          if(imgElem) imgElem.src = country.image;
+
+          // Update hotels
+          const hotelGrid = document.querySelector(".hotel-grid");
+          if(hotelGrid){
+              hotelGrid.innerHTML = "";
+              country.hotels.forEach(hotel => {
+                  hotelGrid.innerHTML += `
+                  <div class="hotel-card">
+                      <img src="${hotel.image}">
+                      <div class="hotel-header">
+                          <h3>${hotel.name}</h3>
+                          <span class="rating">${hotel.rating}</span>
+                      </div>
+                      <div class="tags">${hotel.tags}</div>
+                      <div class="price">${hotel.price}</div>
+                      <p class="hotel-desc">${hotel.desc}</p>
+                  </div>`;
+              });
+          }
+      } else {
+          console.error("Country not found in data");
+      }
+  })
+  .catch(err => console.error("Failed to load countries data", err));
