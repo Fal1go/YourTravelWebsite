@@ -137,7 +137,7 @@ body {
     background: transparent;
 }
 
-/* Сетка карточек стран */
+/* Сетка карточек стран */ 
 .country-grid {
     display: grid;
     /* Автоматическое заполнение: минимум 280px на карточку */
@@ -246,11 +246,6 @@ body {
     /* justify-content: center; */
 }
 
-/* icons */
-/* .nav-icon img{
-    width: 30px;
-    cursor: pointer;
-} */
 
 /* search bar (mini version inside navbar) */
 .mini-search{
@@ -316,8 +311,8 @@ body {
     font-family: var(--font-header);
     font-weight: 400;
     font-size: clamp(3rem, 10vw, 6rem);
-    line-height: 1;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    border-bottom: 3px solid var(--navy);
 }
 
 /* Сетка отелей */
@@ -325,7 +320,78 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
+    justify-items:baseline;
     padding: 40px 5%;
+}
+
+.hotel-card img{
+    width: 450px;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+}
+.hotel-card{
+    background: white;
+    border: 1px solid var(--navy);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    max-width: 750px;
+    width: 750px;
+    height: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease ;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hotel-content-block{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+
+.hotel-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.hotel-header,.tags,.price{
+    align-items: center;
+}
+
+.hotel-header{
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    border-bottom: 1px solid var(--navy);
+}
+
+.hotel-header h3{
+    margin:0;
+}
+
+.rating{
+    flex: 1;
+    text-align: center;
+}
+
+.tags{
+    padding: 10px 5px;
+    border-radius: 5px;
+
+    display: block;
+    background-color: var(--highlight);
+}
+
+.price{
+    text-decoration: underline;
+}
+
+.hotel-desc{
+    color:var(--text-paleNavy);
+    margin: 10px 0;
 }
 
 /* --- МЕДИА-ЗАПРОСЫ (АДАПТИВНОСТЬ) --- */

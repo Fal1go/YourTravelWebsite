@@ -83,14 +83,18 @@ fetch('countries.json')
               country.hotels.forEach(hotel => {
                   hotelGrid.innerHTML += `
                   <div class="hotel-card">
-                      <img src="${hotel.image}">
-                      <div class="hotel-header">
-                          <h3>${hotel.name}</h3>
-                          <span class="rating">${hotel.rating}</span>
-                      </div>
-                      <div class="tags">${hotel.tags}</div>
-                      <div class="price">${hotel.price}</div>
-                      <p class="hotel-desc">${hotel.desc}</p>
+                    <img src="${hotel.image}">
+                    <div class = "hotel-content-block">
+                        <div class = "hotel-info">
+                            <div class="hotel-header">
+                                <h3>${hotel.name}</h3>
+                                <span class="rating">${hotel.rating}</span>
+                            </div>
+                            <div class="tags">${hotel.tags}</div>
+                            <div class="price">${hotel.price}</div>
+                        </div>
+                        <p class="hotel-desc">${hotel.desc}</p>
+                    </div>
                   </div>`;
               });
           }
