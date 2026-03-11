@@ -357,7 +357,7 @@ body {
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 15px;
+        padding: 10px 20x;
     }
 
     .country-grid, .hotel-grid {
