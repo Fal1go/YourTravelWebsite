@@ -64,7 +64,7 @@ body {
     font-family: var(--font-header);
     font-weight: normal;
 	font-style: normal;
-    font-size: clamp(1.5rem, 5vw, 3.5rem); /* Размер подстраивается под экран */
+    font-size: clamp(1.5rem, 7vw, 3.5rem); /* Размер подстраивается под экран */
     letter-spacing: 2px;
 }
 
