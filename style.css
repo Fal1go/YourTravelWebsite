@@ -66,11 +66,7 @@ body {
 	font-style: normal;
     font-size: clamp(1.5rem, 7vw, 3.5rem); /* Размер подстраивается под экран */
     letter-spacing: 2px;
-}
-
-.logo a{
-    text-decoration: none;
-    color: inherit;
+    cursor: pointer;
 }
 
 .logo span{

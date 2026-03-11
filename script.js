@@ -43,3 +43,12 @@ if(profile){
         // window.location.href = 'profile.html';
     });
 }
+
+// Возврат домой через лого
+const logo = document.getElementById("logo");
+
+if (logo){
+    logo.addEventListener("click", () => {
+        window.location.href = "index.html";
+    });
+}
