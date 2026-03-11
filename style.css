@@ -68,6 +68,11 @@ body {
     letter-spacing: 2px;
 }
 
+.logo a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo span{
     color: var(--highlight)
 }
