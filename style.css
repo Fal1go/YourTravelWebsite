@@ -121,7 +121,12 @@ body {
 
 /* --- ГЛАВНАЯ СТРАНИЦА --- */
 .container {
-    padding: 15px 5%;
+    /* padding: 15px 5%; */
+    padding: 30px 0;
+}
+
+.search-container{
+    padding: 0 3%;
 }
 
 .hero-title {
@@ -129,6 +134,7 @@ body {
     font-weight: 100;
     font-style: italic;
     margin: 0px 0 15px 0;
+    padding: 0 3%;
     font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
@@ -167,14 +173,43 @@ body {
     background: transparent;
 }
 
+/* Полоса видов туризма */
+
+.vacation-types-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+    /* border: 2px solid var(--navy); */
+    
+    margin: 0 0 30px 0;
+    padding: 0 0px;
+}
+
+.vacation-p-block{
+    font-style: italic;
+    text-align: center;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.vacation-types-container :hover{
+    font-weight: bold;
+    /* transform: translateY(-2px); */
+    cursor: pointer;
+    background-color: rgba(236, 236, 236, 0.8);
+}
+
 /* Сетка карточек стран */ 
 .country-grid {
     display: grid;
     /* Автоматическое заполнение: минимум 280px на карточку */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 2fr));
     justify-items: center;
-    gap: 25px;
+    /* gap: 25px; */
     margin-bottom: 50px;
+    /* padding: 0 3%; */
 }
 
 .card {
@@ -185,9 +220,9 @@ body {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    max-width: 280px;
-    width: 280px;
-    height: 500px;
+    max-width: 450px;
+    width: 450px;
+    height: 370px;
     transition: transform 0.3s ease, box-shadow 0.3s ease ;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -216,22 +251,22 @@ body {
     border-radius: 10px;
 }
 
-.card-desc {
+/* .card-desc {
     margin-top: 10px;
 
-    flex-grow: 1;      /* takes remaining space */
-    overflow: hidden;  /* prevents stretching */
+    flex-grow: 1;      takes remaining space
+    overflow: hidden;  prevents stretching
     position: relative;
-}
+} */
 
 .card-desc p {
-    margin: 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    /* margin: 0; */
+    /* word-wrap: break-word; */
+    /* overflow-wrap: break-word; */
     color: var(--text-paleNavy);
 }
 
-.card-desc::after {
+/* .card-desc::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -244,7 +279,7 @@ body {
         rgba(255, 255, 255, 0),
         white
     );
-}
+} */
 
 /* --- FOOTER --- */
 
