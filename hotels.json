@@ -1,0 +1,249 @@
+[
+  {
+    "name": "Rixos President Astana",
+    "country": "КАЗАХСТАН",
+    "country_code": "kazakhstan",
+    "rating": "4.7 ★",
+    "price": "96 600 ₸",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400",
+    "tags": ["#БАССЕЙН", "#СПА", "#ЗАВТРАК"],
+    "desc": "Роскошный отель в центре Астаны."
+  },
+  {
+    "name": "The Ritz-Carlton Almaty",
+    "country": "КАЗАХСТАН",
+    "country_code": "kazakhstan",
+    "rating": "4.8 ★",
+    "price": "110 000 ₸",
+    "image": "https://images.unsplash.com/photo-1600566751469-d49f5cf537f1?q=80&w=400",
+    "tags": ["#СПА", "#ЛЮКС", "#ЦЕНТР"],
+    "desc": "Элегантный отель с видом на горы и центр города."
+  },
+  {
+    "name": "Shymkent Grand Hotel",
+    "country": "КАЗАХСТАН",
+    "country_code": "kazakhstan",
+    "rating": "4.5 ★",
+    "price": "60 000 ₸",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
+    "tags": ["#ЦЕНТР", "#РЕСТОРАН", "#БАССЕЙН"],
+    "desc": "Комфортный отель в центре Шымкента с современными удобствами."
+  },
+
+  {
+    "name": "Hôtel Plaza Athénée",
+    "country": "ФРАНЦИЯ",
+    "country_code": "france",
+    "rating": "4.8 ★",
+    "price": "280 000 ₸",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400",
+    "tags": ["#ЛЮКС", "#ЦЕНТР", "#СПА"],
+    "desc": "Роскошный пятизвёздочный отель в центре Парижа."
+  },
+  {
+    "name": "Hotel Le Meurice",
+    "country": "ФРАНЦИЯ",
+    "country_code": "france",
+    "rating": "4.7 ★",
+    "price": "260 000 ₸",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
+    "tags": ["#ПАРИЖ", "#ДИЗАЙН", "#РЕСТОРАН"],
+    "desc": "Элегантный отель рядом с садом Тюильри."
+  },
+  {
+    "name": "Hotel Martinez Cannes",
+    "country": "ФРАНЦИЯ",
+    "country_code": "france",
+    "rating": "4.6 ★",
+    "price": "210 000 ₸",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400",
+    "tags": ["#МОРЕ", "#ПЛЯЖ", "#ТЕРРАСА"],
+    "desc": "Знаменитый курортный отель на Лазурном берегу."
+  },
+
+  {
+    "name": "Soneva Fushi",
+    "country": "МАЛЬДИВЫ",
+    "country_code": "maldives",
+    "rating": "4.9 ★",
+    "price": "420 000 ₸",
+    "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
+    "tags": ["#ВИЛЛА", "#ОКЕАН", "#СПА"],
+    "desc": "Эксклюзивные виллы на острове среди тропической природы."
+  },
+  {
+    "name": "Baros Maldives",
+    "country": "МАЛЬДИВЫ",
+    "country_code": "maldives",
+    "rating": "4.8 ★",
+    "price": "360 000 ₸",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
+    "tags": ["#ЛАГУНА", "#ДАЙВИНГ", "#ПЛЯЖ"],
+    "desc": "Популярный курорт с красивым коралловым рифом."
+  },
+  {
+    "name": "Anantara Dhigu Resort",
+    "country": "МАЛЬДИВЫ",
+    "country_code": "maldives",
+    "rating": "4.7 ★",
+    "price": "340 000 ₸",
+    "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
+    "tags": ["#ВИЛЛА", "#СПА", "#ОКЕАН"],
+    "desc": "Курорт с водными виллами и панорамным видом."
+  },
+
+  {
+    "name": "Sunrise Arabian Beach Resort",
+    "country": "ЕГИПЕТ",
+    "country_code": "egypt",
+    "rating": "4.6 ★",
+    "price": "78 000 ₸",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
+    "tags": ["#МОРЕ", "#БАССЕЙН", "#ВСЕВКЛЮЧЕНО"],
+    "desc": "Популярный курорт в Шарм-эль-Шейхе."
+  },
+  {
+    "name": "Rixos Sharm El Sheikh",
+    "country": "ЕГИПЕТ",
+    "country_code": "egypt",
+    "rating": "4.8 ★",
+    "price": "120 000 ₸",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=400",
+    "tags": ["#ЛЮКС", "#ПЛЯЖ", "#СПА"],
+    "desc": "Пятизвёздочный курорт на берегу Красного моря."
+  },
+  {
+    "name": "Steigenberger Nile Palace",
+    "country": "ЕГИПЕТ",
+    "country_code": "egypt",
+    "rating": "4.7 ★",
+    "price": "95 000 ₸",
+    "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
+    "tags": ["#НИЛ", "#ТЕРРАСА", "#РЕСТОРАН"],
+    "desc": "Отель с видом на реку Нил в Луксоре."
+  },
+
+  {
+    "name": "Hotel Artemide Rome",
+    "country": "ИTАЛИЯ",
+    "country_code": "italy",
+    "rating": "4.8 ★",
+    "price": "145 000 ₸",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400",
+    "tags": ["#ЦЕНТР", "#ЗАВТРАК", "#ТЕРРАСА"],
+    "desc": "Элегантный отель в центре Рима рядом с главными достопримечательностями."
+  },
+  {
+    "name": "Belmond Hotel Cipriani",
+    "country": "ИTАЛИЯ",
+    "country_code": "italy",
+    "rating": "4.9 ★",
+    "price": "420 000 ₸",
+    "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
+    "tags": ["#ЛЮКС", "#ВЕНЕЦИЯ", "#СПА"],
+    "desc": "Роскошный отель в Венеции с видом на лагуну."
+  },
+  {
+    "name": "Grand Hotel Tremezzo",
+    "country": "ИTАЛИЯ",
+    "country_code": "italy",
+    "rating": "4.7 ★",
+    "price": "380 000 ₸",
+    "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
+    "tags": ["#КОМО", "#БАССЕЙН", "#ЛЮКС"],
+    "desc": "Элегантный отель с видом на озеро Комо и собственным бассейном."
+  },
+
+  {
+    "name": "Phuket Marriott Resort",
+    "country": "TАЙЛАНД",
+    "country_code": "thailand",
+    "rating": "4.7 ★",
+    "price": "92 000 ₸",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
+    "tags": ["#ПЛЯЖ", "#БАССЕЙН", "#СПА"],
+    "desc": "Тропический курорт на берегу Андаманского моря."
+  },
+  {
+    "name": "Rayavadee Krabi",
+    "country": "TАЙЛАНД",
+    "country_code": "thailand",
+    "rating": "4.8 ★",
+    "price": "120 000 ₸",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=400",
+    "tags": ["#РАЙСКИЙ ОСТРОВ", "#ЛЮКС", "#СПА"],
+    "desc": "Эксклюзивный курорт с видом на скалы и море."
+  },
+  {
+    "name": "Mandarin Oriental Bangkok",
+    "country": "TАЙЛАНД",
+    "country_code": "thailand",
+    "rating": "4.9 ★",
+    "price": "150 000 ₸",
+    "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
+    "tags": ["#ЦЕНТР", "#СПА", "#РЕСТОРАН"],
+    "desc": "Роскошный отель в центре Бангкока на берегу реки."
+  },
+
+  {
+    "name": "Park Hotel Tokyo",
+    "country": "ЯПОНИЯ",
+    "country_code": "japan",
+    "rating": "4.6 ★",
+    "price": "138 000 ₸",
+    "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
+    "tags": ["#ВИДНАГОРОД", "#ДИЗАЙН", "#ЦЕНТР"],
+    "desc": "Дизайнерский отель в Токио с панорамным видом на город."
+  },
+  {
+    "name": "The Ritz-Carlton Kyoto",
+    "country": "ЯПОНИЯ",
+    "country_code": "japan",
+    "rating": "4.8 ★",
+    "price": "210 000 ₸",
+    "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
+    "tags": ["#РЕКА", "#СПА", "#ЛЮКС"],
+    "desc": "Элегантный отель у реки Камо в Киото."
+  },
+  {
+    "name": "Hoshinoya Fuji",
+    "country": "ЯПОНИЯ",
+    "country_code": "japan",
+    "rating": "4.7 ★",
+    "price": "180 000 ₸",
+    "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
+    "tags": ["#ГОРЫ", "#РЕЛАКС", "#СПА"],
+    "desc": "Роскошный горный курорт с видом на Фудзи и природой."
+  },
+
+  {
+    "name": "Shangri-La Sydney",
+    "country": "АВСТРАЛИЯ",
+    "country_code": "australia",
+    "rating": "4.7 ★",
+    "price": "170 000 ₸",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=400",
+    "tags": ["#ВИДНАМОРЕ", "#ЛЮКС", "#СПА"],
+    "desc": "Пятизвёздочный отель с видом на Сиднейскую гавань и оперу."
+  },
+  {
+    "name": "Qualia Hamilton Island",
+    "country": "АВСТРАЛИЯ",
+    "country_code": "australia",
+    "rating": "4.9 ★",
+    "price": "420 000 ₸",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
+    "tags": ["#РАЙСКИЙ ОСТРОВ", "#СПА", "#ЛЮКС"],
+    "desc": "Роскошный курорт на острове с панорамными видами."
+  },
+  {
+    "name": "The Langham Melbourne",
+    "country": "АВСТРАЛИЯ",
+    "country_code": "australia",
+    "rating": "4.8 ★",
+    "price": "150 000 ₸",
+    "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
+    "tags": ["#ЦЕНТР", "#СПА", "#РЕСТОРАН"],
+    "desc": "Элегантный отель в центре Мельбурна с видом на город."
+  }
+]

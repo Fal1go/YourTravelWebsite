@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourTravel - Отель</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="country-page">
+    <nav class="navbar">
+        <div class="nav-icon airplane" id="burger-menu">
+            <img src="https://img.icons8.com/ios-filled/50/1a2b48/airplane-take-off.png" alt="menu">
+        </div>
+        <div class = "logo-search-container">
+            <div class="logo" id = "logo">YOUR<span>TRAVEL</span></div>
+            <div class="search-bar mini-search">
+                <img src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search">
+                <input type = "search" placeholder="Поиск...">
+            </div>
+        </div>
+        <div class="nav-icon user" id="user-profile">
+            <img src="https://img.icons8.com/ios-filled/50/1a2b48/user-male-circle.png" alt="user">
+        </div>
+    </nav>
+
+    <section class="country-hero hotel-hero">
+        <div class="country-info">
+            <h1 class="main-hotel-title">НАЗВАНИЕ ОТЕЛЯ</h1>
+            <div class="hotel-meta">
+                <span class="rating">—</span>
+                <span class="tags">—</span>
+                <span class="price">—</span>
+            </div>
+            <div class="full-desc hotel-short-desc">Короткое описание отеля</div>
+        </div>
+        <div class="main-image-container">
+            <img src="" alt="hotel image" class="hotel-main-image">
+        </div>
+    </section>
+
+    <section class="hotel-details">
+        <div class="hotel-content">
+            <h2>Описание</h2>
+            <p class="hotel-desc">Полное описание отеля загрузится здесь.</p>
+
+            <h3>Удобства</h3>
+            <div class="tags amenities">—</div>
+
+            <div class="hotel-actions">
+                <button id="back-to-country" class="btn">Назад к отелям</button>
+                <button id="book-now" class="btn primary">Забронировать</button>
+            </div>
+        </div>
+
+        <div class="hotel-photos">
+            <h3>Фотографии</h3>
+            <div class="photos-grid"></div>
+        </div>
+
+        <div class="similar-hotels">
+            <h3>Похожие отели</h3>
+            <div class="similar-grid"></div>
+        </div>
+
+        <div class="comments-section">
+            <h3>Отзывы</h3>
+            <div class="comments-list"></div>
+            <form id="comment-form">
+                <input type="text" id="comment-name" placeholder="Ваше имя">
+                <textarea id="comment-text" rows="4" placeholder="Ваш отзыв"></textarea>
+                <button type="submit" class="btn primary">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <p>© 2026 YourTravel | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

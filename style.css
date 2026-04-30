@@ -390,9 +390,9 @@ body {
 }
 
 .hotel-card img{
-    width: 450px;
+    width: 45%;
     max-width: 450px;
-    min-width: 450px;
+    /* min-width: 150px; */
     border-top-left-radius:15px;
     border-bottom-left-radius:15px;
     object-fit: cover;
@@ -422,6 +422,15 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px 15px;
+    flex: 1 1 auto; /* allow content block to take remaining space and shrink */
+    min-width: 0; /* allow text to wrap inside flex item */
+}
+
+.hotel-meta{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 12px;
 }
 
 .hotel-info{
@@ -468,7 +477,53 @@ body {
 .hotel-desc{
     color:var(--text-paleNavy);
     margin: 10px 0;
+    overflow-wrap: anywhere; /* break long words or hashtags */
+    word-break: break-word;
 }
+
+/* Photos grid on hotel page */
+.photos-grid{
+    display:flex;
+    gap:10px;
+    padding: 10px 5%;
+    flex-wrap: wrap;
+}
+.photo-thumb{
+    width:120px;
+    height:80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Similar hotels */
+.similar-grid{
+    display:flex;
+    gap:12px;
+    padding: 10px 5%;
+}
+.similar-card{
+    width: 200px;
+    border: 1px solid var(--navy);
+    border-radius: 10px;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: white;
+}
+.similar-card img{ width:100%; height:100px; object-fit:cover; }
+.similar-card .sim-info{ padding: 8px; display:flex; flex-direction:column; gap:6px; }
+
+/* Comments */
+.comments-section{ padding: 20px 5%; margin: 20px 0; background: white; border-radius: 10px; border: 1px solid rgba(0,0,0,0.04); }
+.comments-list .comment{ padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.comment-meta{ font-size: 0.9rem; color: var(--text-paleNavy); margin-bottom: 6px; }
+.comment-text{ color: var(--text-paleNavy); }
+#comment-form{ display:flex; flex-direction: column; gap:8px; max-width: 700px; }
+#comment-form input, #comment-form textarea{ padding:8px; border-radius:6px; border:1px solid rgba(0,0,0,0.1); }
+#comment-form button{ align-self:flex-start; }
 
 /* --- МЕДИА-ЗАПРОСЫ (АДАПТИВНОСТЬ) --- */
 
