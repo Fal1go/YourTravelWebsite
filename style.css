@@ -461,7 +461,8 @@ body {
 
 .rating{
     flex: 1;
-    padding: 0 1px;
+    max-width: 50px;
+    padding-left: 10px;
     text-align: center;
 }
 
@@ -620,7 +621,7 @@ body {
 /* Compare checkbox inside card */
 .compare-wrapper{
     position: absolute;
-    top: 10px;
+    top: 85%;
     right: 12px;
     background: rgba(255,255,255,0.9);
     padding: 6px 8px;
