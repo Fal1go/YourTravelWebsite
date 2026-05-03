@@ -7,7 +7,16 @@
     "price": "96 600 ₸",
     "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400",
     "tags": ["#БАССЕЙН", "#СПА", "#ЗАВТРАК"],
-    "desc": "Роскошный отель в центре Астаны."
+    "desc": "Роскошный отель в центре Астаны.",
+    "level": "5-star",
+    "district": "центр",
+    "suitable_for": "семьи, деловые путешественники",
+    "features": ["Бассейн", "SPA", "Ресторан", "Бесплатный Wi-Fi"],
+    "location": "Nur-Sultan Ave, Astana",
+    "reviews": 128,
+    "pros": ["Центральное расположение", "Отличный сервис", "Близко к метро"],
+    "cons": ["Высокая цена", "Шум с улицы"],
+    "tags_standard": ["центр города", "рядом с метро", "люкс"]
   },
   {
     "name": "The Ritz-Carlton Almaty",
@@ -17,7 +26,16 @@
     "price": "110 000 ₸",
     "image": "https://images.unsplash.com/photo-1600566751469-d49f5cf537f1?q=80&w=400",
     "tags": ["#СПА", "#ЛЮКС", "#ЦЕНТР"],
-    "desc": "Элегантный отель с видом на горы и центр города."
+    "desc": "Элегантный отель с видом на горы и центр города.",
+    "level": "5-star",
+    "district": "центр",
+    "suitable_for": "романтический отдых, деловые",
+    "features": ["SPA", "Ресторан", "Фитнес-центр"],
+    "location": "Almaty city center",
+    "reviews": 210,
+    "pros": ["Вид на горы", "Роскошь"],
+    "cons": ["Дорого"],
+    "tags_standard": ["центр города", "люкс"]
   },
   {
     "name": "Shymkent Grand Hotel",
@@ -27,9 +45,17 @@
     "price": "60 000 ₸",
     "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
     "tags": ["#ЦЕНТР", "#РЕСТОРАН", "#БАССЕЙН"],
-    "desc": "Комфортный отель в центре Шымкента с современными удобствами."
+    "desc": "Комфортный отель в центре Шымкента с современными удобствами.",
+    "level": "4-star",
+    "district": "центр",
+    "suitable_for": "бюджетный комфорт",
+    "features": ["Ресторан", "Бассейн", "Конференц-залы"],
+    "location": "Shymkent city center",
+    "reviews": 46,
+    "pros": ["Доступная цена", "Центр города"],
+    "cons": ["Меньше дополнительных удобств"],
+    "tags_standard": ["центр города", "бюджетный"]
   },
-
   {
     "name": "Hôtel Plaza Athénée",
     "country": "ФРАНЦИЯ",
@@ -38,7 +64,16 @@
     "price": "280 000 ₸",
     "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400",
     "tags": ["#ЛЮКС", "#ЦЕНТР", "#СПА"],
-    "desc": "Роскошный пятизвёздочный отель в центре Парижа."
+    "desc": "Роскошный пятизвёздочный отель в центре Парижа.",
+    "level": "5-star",
+    "district": "центр",
+    "suitable_for": "люксовый отдых",
+    "features": ["Ресторан высокой кухни", "SPA", "Консьерж"],
+    "location": "Avenue Montaigne, Paris",
+    "reviews": 540,
+    "pros": ["Прекрасная локация", "Высокий сервис"],
+    "cons": ["Очень высокая цена"],
+    "tags_standard": ["центр города", "люкс"]
   },
   {
     "name": "Hotel Le Meurice",
@@ -48,7 +83,16 @@
     "price": "260 000 ₸",
     "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
     "tags": ["#ПАРИЖ", "#ДИЗАЙН", "#РЕСТОРАН"],
-    "desc": "Элегантный отель рядом с садом Тюильри."
+    "desc": "Элегантный отель рядом с садом Тюильри.",
+    "level": "5-star",
+    "district": "центр",
+    "suitable_for": "культурный отдых",
+    "features": ["Ресторан", "Исторический интерьер", "SPA"],
+    "location": "Rue de Rivoli, Paris",
+    "reviews": 312,
+    "pros": ["Рядом Лувр", "Элегантность"],
+    "cons": ["Высокая цена"],
+    "tags_standard": ["центр города", "люкс"]
   },
   {
     "name": "Hotel Martinez Cannes",
@@ -58,9 +102,17 @@
     "price": "210 000 ₸",
     "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400",
     "tags": ["#МОРЕ", "#ПЛЯЖ", "#ТЕРРАСА"],
-    "desc": "Знаменитый курортный отель на Лазурном берегу."
+    "desc": "Знаменитый курортный отель на Лазурном берегу.",
+    "level": "5-star",
+    "district": "пляж",
+    "suitable_for": "пляжный отдых",
+    "features": ["Прямой доступ к пляжу", "Терраса", "Бар"],
+    "location": "La Croisette, Cannes",
+    "reviews": 198,
+    "pros": ["Пляж рядом", "Терраса с видом"],
+    "cons": ["Шумно в сезон"],
+    "tags_standard": ["пляж", "люкс"]
   },
-
   {
     "name": "Soneva Fushi",
     "country": "МАЛЬДИВЫ",
@@ -69,7 +121,16 @@
     "price": "420 000 ₸",
     "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
     "tags": ["#ВИЛЛА", "#ОКЕАН", "#СПА"],
-    "desc": "Эксклюзивные виллы на острове среди тропической природы."
+    "desc": "Эксклюзивные виллы на острове среди тропической природы.",
+    "level": "5-star",
+    "district": "остров/пляж",
+    "suitable_for": "уединение, романтика",
+    "features": ["Виллы над водой", "SPA", "Эко-курорт"],
+    "location": "Baa Atoll, Maldives",
+    "reviews": 320,
+    "pros": ["Уединение", "Природа"],
+    "cons": ["Дорого и удаленно"],
+    "tags_standard": ["пляж", "люкс"]
   },
   {
     "name": "Baros Maldives",
@@ -79,7 +140,16 @@
     "price": "360 000 ₸",
     "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
     "tags": ["#ЛАГУНА", "#ДАЙВИНГ", "#ПЛЯЖ"],
-    "desc": "Популярный курорт с красивым коралловым рифом."
+    "desc": "Популярный курорт с красивым коралловым рифом.",
+    "level": "5-star",
+    "district": "лагуна/пляж",
+    "suitable_for": "дайвинг, романтика",
+    "features": ["Дайвинг", "Лагуна", "Рестораны"],
+    "location": "North Male Atoll",
+    "reviews": 245,
+    "pros": ["Риф и дайвинг"],
+    "cons": ["Цена"],
+    "tags_standard": ["пляж", "люкс"]
   },
   {
     "name": "Anantara Dhigu Resort",
@@ -89,9 +159,17 @@
     "price": "340 000 ₸",
     "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
     "tags": ["#ВИЛЛА", "#СПА", "#ОКЕАН"],
-    "desc": "Курорт с водными виллами и панорамным видом."
+    "desc": "Курорт с водными виллами и панорамным видом.",
+    "level": "5-star",
+    "district": "пляж",
+    "suitable_for": "семьи, романтика",
+    "features": ["Водные виллы", "SPA", "Рестораны"],
+    "location": "South Male Atoll",
+    "reviews": 198,
+    "pros": ["Подходит для семей"],
+    "cons": ["Цена"],
+    "tags_standard": ["пляж", "семейный"]
   },
-
   {
     "name": "Sunrise Arabian Beach Resort",
     "country": "ЕГИПЕТ",
@@ -100,7 +178,16 @@
     "price": "78 000 ₸",
     "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
     "tags": ["#МОРЕ", "#БАССЕЙН", "#ВСЕВКЛЮЧЕНО"],
-    "desc": "Популярный курорт в Шарм-эль-Шейхе."
+    "desc": "Популярный курорт в Шарм-эль-Шейхе.",
+    "level": "4-star",
+    "district": "пляж",
+    "suitable_for": "семейный, пляжный отдых",
+    "features": ["All inclusive", "Бассейн", "Пляж"],
+    "location": "Sharm el Sheikh",
+    "reviews": 410,
+    "pros": ["Пляж", "Всё включено"],
+    "cons": ["Туристическая зона"],
+    "tags_standard": ["пляж", "бюджетный"]
   },
   {
     "name": "Rixos Sharm El Sheikh",
@@ -110,7 +197,16 @@
     "price": "120 000 ₸",
     "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=400",
     "tags": ["#ЛЮКС", "#ПЛЯЖ", "#СПА"],
-    "desc": "Пятизвёздочный курорт на берегу Красного моря."
+    "desc": "Пятизвёздочный курорт на берегу Красного моря.",
+    "level": "5-star",
+    "district": "пляж",
+    "suitable_for": "курортный отдых",
+    "features": ["SPA", "Пляж", "Дайвинг"],
+    "location": "Sharm el Sheikh coastline",
+    "reviews": 520,
+    "pros": ["Пляж", "Отличный сервис"],
+    "cons": ["Цена"],
+    "tags_standard": ["пляж", "люкс"]
   },
   {
     "name": "Steigenberger Nile Palace",
@@ -120,9 +216,17 @@
     "price": "95 000 ₸",
     "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
     "tags": ["#НИЛ", "#ТЕРРАСА", "#РЕСТОРАН"],
-    "desc": "Отель с видом на реку Нил в Луксоре."
+    "desc": "Отель с видом на реку Нил в Луксоре.",
+    "level": "4-star",
+    "district": "река/центр",
+    "suitable_for": "исторические туры",
+    "features": ["Вид на Нил", "Ресторан", "Терраса"],
+    "location": "Luxor, Nile promenade",
+    "reviews": 120,
+    "pros": ["Вид на Нил", "Близко к храмам"],
+    "cons": ["Туристическая активность"],
+    "tags_standard": ["центр города", "бюджетный"]
   },
-
   {
     "name": "Hotel Artemide Rome",
     "country": "ИTАЛИЯ",
@@ -131,7 +235,16 @@
     "price": "145 000 ₸",
     "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400",
     "tags": ["#ЦЕНТР", "#ЗАВТРАК", "#ТЕРРАСА"],
-    "desc": "Элегантный отель в центре Рима рядом с главными достопримечательностями."
+    "desc": "Элегантный отель в центре Рима рядом с главными достопримечательностями.",
+    "level": "4-star",
+    "district": "центр",
+    "suitable_for": "городские экскурсии",
+    "features": ["Завтрак", "Терраса", "Удобное расположение"],
+    "location": "Via Nazionale, Rome",
+    "reviews": 220,
+    "pros": ["Отличное расположение"],
+    "cons": ["Маленькие номера"],
+    "tags_standard": ["центр города", "семейный"]
   },
   {
     "name": "Belmond Hotel Cipriani",
@@ -141,7 +254,16 @@
     "price": "420 000 ₸",
     "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
     "tags": ["#ЛЮКС", "#ВЕНЕЦИЯ", "#СПА"],
-    "desc": "Роскошный отель в Венеции с видом на лагуну."
+    "desc": "Роскошный отель в Венеции с видом на лагуну.",
+    "level": "5-star",
+    "district": "лагуна",
+    "suitable_for": "люкс, спокойствие",
+    "features": ["Роскошный сервис", "Вид на лагуну", "Приватный трансфер"],
+    "location": "Giudecca, Venice",
+    "reviews": 400,
+    "pros": ["Атмосфера", "Вид"],
+    "cons": ["Цена"],
+    "tags_standard": ["люкс"]
   },
   {
     "name": "Grand Hotel Tremezzo",
@@ -151,9 +273,17 @@
     "price": "380 000 ₸",
     "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
     "tags": ["#КОМО", "#БАССЕЙН", "#ЛЮКС"],
-    "desc": "Элегантный отель с видом на озеро Комо и собственным бассейном."
+    "desc": "Элегантный отель с видом на озеро Комо и собственным бассейном.",
+    "level": "5-star",
+    "district": "озеро",
+    "suitable_for": "романтический отдых, люкс",
+    "features": ["Бассейн", "Вид на озеро", "Ресторан"],
+    "location": "Lake Como",
+    "reviews": 178,
+    "pros": ["Вид на озеро", "Эксклюзивность"],
+    "cons": ["Цена"],
+    "tags_standard": ["люкс"]
   },
-
   {
     "name": "Phuket Marriott Resort",
     "country": "TАЙЛАНД",
@@ -162,7 +292,16 @@
     "price": "92 000 ₸",
     "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
     "tags": ["#ПЛЯЖ", "#БАССЕЙН", "#СПА"],
-    "desc": "Тропический курорт на берегу Андаманского моря."
+    "desc": "Тропический курорт на берегу Андаманского моря.",
+    "level": "4-star",
+    "district": "пляж",
+    "suitable_for": "семьи",
+    "features": ["Пляж", "Бассейн", "Детская зона"],
+    "location": "Phuket",
+    "reviews": 340,
+    "pros": ["Пляж", "Подходит для семей"],
+    "cons": ["Переполнен в сезон"],
+    "tags_standard": ["пляж", "семейный"]
   },
   {
     "name": "Rayavadee Krabi",
@@ -172,7 +311,16 @@
     "price": "120 000 ₸",
     "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=400",
     "tags": ["#РАЙСКИЙ ОСТРОВ", "#ЛЮКС", "#СПА"],
-    "desc": "Эксклюзивный курорт с видом на скалы и море."
+    "desc": "Эксклюзивный курорт с видом на скалы и море.",
+    "level": "5-star",
+    "district": "пляж",
+    "suitable_for": "природа, романтика",
+    "features": ["Пляж", "Рестораны", "Уникальные пейзажи"],
+    "location": "Krabi",
+    "reviews": 210,
+    "pros": ["Уникальные пейзажи"],
+    "cons": ["Цена"],
+    "tags_standard": ["пляж", "люкс"]
   },
   {
     "name": "Mandarin Oriental Bangkok",
@@ -182,9 +330,17 @@
     "price": "150 000 ₸",
     "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
     "tags": ["#ЦЕНТР", "#СПА", "#РЕСТОРАН"],
-    "desc": "Роскошный отель в центре Бангкока на берегу реки."
+    "desc": "Роскошный отель в центре Бангкока на берегу реки.",
+    "level": "5-star",
+    "district": "центр",
+    "suitable_for": "деловые, романтика",
+    "features": ["Ресторан", "SPA", "Расположение у реки"],
+    "location": "Bangkok Riverside",
+    "reviews": 600,
+    "pros": ["Сервис", "Расположение"],
+    "cons": ["Высокая цена"],
+    "tags_standard": ["центр города", "люкс"]
   },
-
   {
     "name": "Park Hotel Tokyo",
     "country": "ЯПОНИЯ",
@@ -193,7 +349,16 @@
     "price": "138 000 ₸",
     "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
     "tags": ["#ВИДНАГОРОД", "#ДИЗАЙН", "#ЦЕНТР"],
-    "desc": "Дизайнерский отель в Токио с панорамным видом на город."
+    "desc": "Дизайнерский отель в Токио с панорамным видом на город.",
+    "level": "4-star",
+    "district": "центр",
+    "suitable_for": "городские поездки",
+    "features": ["Дизайн-номера", "Ресторан", "Панорамные виды"],
+    "location": "Shiodome, Tokyo",
+    "reviews": 150,
+    "pros": ["Панорамный вид"],
+    "cons": ["Цена"],
+    "tags_standard": ["центр города"]
   },
   {
     "name": "The Ritz-Carlton Kyoto",
@@ -203,7 +368,16 @@
     "price": "210 000 ₸",
     "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
     "tags": ["#РЕКА", "#СПА", "#ЛЮКС"],
-    "desc": "Элегантный отель у реки Камо в Киото."
+    "desc": "Элегантный отель у реки Камо в Киото.",
+    "level": "5-star",
+    "district": "река/центр",
+    "suitable_for": "культура, люкс",
+    "features": ["SPA", "Ресторан", "Традиционный интерьер"],
+    "location": "Kamo River, Kyoto",
+    "reviews": 280,
+    "pros": ["Расположение", "Культурная близость"],
+    "cons": ["Цена"],
+    "tags_standard": ["центр города", "люкс"]
   },
   {
     "name": "Hoshinoya Fuji",
@@ -213,9 +387,17 @@
     "price": "180 000 ₸",
     "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
     "tags": ["#ГОРЫ", "#РЕЛАКС", "#СПА"],
-    "desc": "Роскошный горный курорт с видом на Фудзи и природой."
+    "desc": "Роскошный горный курорт с видом на Фудзи и природой.",
+    "level": "5-star",
+    "district": "гора/природа",
+    "suitable_for": "релакс, природа",
+    "features": ["Онсэн", "Вид на Фудзи", "Эко-курорт"],
+    "location": "Fuji area",
+    "reviews": 132,
+    "pros": ["Вид на Фудзи", "Спокойствие"],
+    "cons": ["Удалённость"],
+    "tags_standard": ["природа", "люкс"]
   },
-
   {
     "name": "Shangri-La Sydney",
     "country": "АВСТРАЛИЯ",
@@ -224,7 +406,16 @@
     "price": "170 000 ₸",
     "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=400",
     "tags": ["#ВИДНАМОРЕ", "#ЛЮКС", "#СПА"],
-    "desc": "Пятизвёздочный отель с видом на Сиднейскую гавань и оперу."
+    "desc": "Пятизвёздочный отель с видом на Сиднейскую гавань и оперу.",
+    "level": "5-star",
+    "district": "гавань/центр",
+    "suitable_for": "вид на оперу, люкс",
+    "features": ["Вид на оперу", "SPA", "Ресторан"],
+    "location": "Sydney Harbour",
+    "reviews": 360,
+    "pros": ["Вид на гавань"],
+    "cons": ["Цена"],
+    "tags_standard": ["центр города", "люкс"]
   },
   {
     "name": "Qualia Hamilton Island",
@@ -234,7 +425,16 @@
     "price": "420 000 ₸",
     "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
     "tags": ["#РАЙСКИЙ ОСТРОВ", "#СПА", "#ЛЮКС"],
-    "desc": "Роскошный курорт на острове с панорамными видами."
+    "desc": "Роскошный курорт на острове с панорамными видами.",
+    "level": "5-star",
+    "district": "остров",
+    "suitable_for": "уединение, романтика",
+    "features": ["Приватность", "SPA", "Риф для дайвинга"],
+    "location": "Hamilton Island",
+    "reviews": 210,
+    "pros": ["Уединение"],
+    "cons": ["Ограниченная доступность"],
+    "tags_standard": ["пляж", "люкс"]
   },
   {
     "name": "The Langham Melbourne",
@@ -244,6 +444,130 @@
     "price": "150 000 ₸",
     "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400",
     "tags": ["#ЦЕНТР", "#СПА", "#РЕСТОРАН"],
-    "desc": "Элегантный отель в центре Мельбурна с видом на город."
+    "desc": "Элегантный отель в центре Мельбурна с видом на город.",
+    "level": "5-star",
+    "district": "центр",
+    "suitable_for": "элегантность, деловые поездки",
+    "features": ["Ресторан", "SPA", "Бизнес-услуги"],
+    "location": "Melbourne CBD",
+    "reviews": 195,
+    "pros": ["Расположение"],
+    "cons": ["Цена"],
+    "tags_standard": ["центр города", "люкс"]
+  }
+  ,
+  {
+    "name": "City Budget Inn",
+    "country": "КАЗАХСТАН",
+    "country_code": "kazakhstan",
+    "rating": "3.8 ★",
+    "price": "15 000 ₸",
+    "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400",
+    "tags": ["#БЮДЖЕТНЫЙ"],
+    "desc": "Недорогой отель для путешественников с ограниченным бюджетом.",
+    "level": "1-star",
+    "district": "окраина",
+    "suitable_for": "бюджетный",
+    "features": ["Wi-Fi", "Парковка"],
+    "location": "Suburban Road, Astana",
+    "reviews": 12,
+    "pros": ["Низкая цена"],
+    "cons": ["Далеко от центра"],
+    "tags_standard": ["бюджетный"]
+  },
+  {
+    "name": "Metro Budget Hotel",
+    "country": "ФРАНЦИЯ",
+    "country_code": "france",
+    "rating": "3.9 ★",
+    "price": "45 000 ₸",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
+    "tags": ["#ЦЕНТР", "#БЮДЖЕТНЫЙ"],
+    "desc": "Удобный бюджетный отель рядом с метро.",
+    "level": "2-star",
+    "district": "рядом с метро",
+    "suitable_for": "бюджетный, транзитные поездки",
+    "features": ["Wi-Fi", "Завтрак по запросу"],
+    "location": "Near Metro Station, Paris",
+    "reviews": 48,
+    "pros": ["Рядом с метро", "Низкая цена"],
+    "cons": ["Маленькие номера"],
+    "tags_standard": ["рядом с метро", "бюджетный"]
+  },
+  {
+    "name": "Cozy Family Guesthouse",
+    "country": "ИTАЛИЯ",
+    "country_code": "italy",
+    "rating": "4.1 ★",
+    "price": "75 000 ₸",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400",
+    "tags": ["#СЕМЕЙНЫЙ", "#ЦЕНТР"],
+    "desc": "Уютный гостевой дом, идеально подходит для семей.",
+    "level": "3-star",
+    "district": "центр",
+    "suitable_for": "семейный",
+    "features": ["Завтрак", "Детская кроватка", "Wi-Fi"],
+    "location": "Family Street, Rome",
+    "reviews": 84,
+    "pros": ["Подходит для семей", "Доступно от центра"],
+    "cons": ["Ограниченная парковка"],
+    "tags_standard": ["семейный", "центр города"]
+  },
+  {
+    "name": "Seaside Bungalow",
+    "country": "ЕГИПЕТ",
+    "country_code": "egypt",
+    "rating": "4.0 ★",
+    "price": "65 000 ₸",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400",
+    "tags": ["#ПЛЯЖ", "#БЮДЖЕТНЫЙ"],
+    "desc": "Небольшие бунгало рядом с пляжем.",
+    "level": "3-star",
+    "district": "пляж",
+    "suitable_for": "пляжный, бюджетный",
+    "features": ["Пляж", "Питание", "Водные виды спорта рядом"],
+    "location": "Beachside, Hurghada",
+    "reviews": 67,
+    "pros": ["На пляже", "Хорошее соотношение цена/качество"],
+    "cons": ["Ограниченные удобства в номере"],
+    "tags_standard": ["пляж", "бюджетный"]
+  },
+  {
+    "name": "Boutique Metro Hotel",
+    "country": "ЯПОНИЯ",
+    "country_code": "japan",
+    "rating": "4.4 ★",
+    "price": "160 000 ₸",
+    "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400",
+    "tags": ["#ЦЕНТР", "#РЯДОМ_С_МЕТРО"],
+    "desc": "Стильный бутик-отель в 2 шагах от станции метро.",
+    "level": "4-star",
+    "district": "рядом с метро",
+    "suitable_for": "деловые, туристы",
+    "features": ["Wi-Fi", "Бар", "Консьерж"],
+    "location": "Near Shinjuku Station, Tokyo",
+    "reviews": 134,
+    "pros": ["Отличное расположение", "Стильный интерьер"],
+    "cons": ["Маленькие номера"],
+    "tags_standard": ["рядом с метро", "центр города"]
+  },
+  {
+    "name": "Countryside Lodge",
+    "country": "АВСTРАЛИЯ",
+    "country_code": "australia",
+    "rating": "3.6 ★",
+    "price": "55 000 ₸",
+    "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400",
+    "tags": ["#БЮДЖЕТНЫЙ"],
+    "desc": "Лодж в сельской местности, для тех, кто любит тишину и природу.",
+    "level": "2-star",
+    "district": "пригород",
+    "suitable_for": "природа, отдых",
+    "features": ["Парковка", "Завтрак", "Терраса"],
+    "location": "Countryside road, Australia",
+    "reviews": 39,
+    "pros": ["Тихое место", "Близко к природе"],
+    "cons": ["Транспорт до города нужен"],
+    "tags_standard": ["бюджетный"]
   }
 ]
