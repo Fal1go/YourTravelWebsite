@@ -511,15 +511,33 @@ if (isHotelPage) {
 
             // Update description
             const descElem = document.querySelector(".full-desc");
-            if(descElem) descElem.innerHTML = country.description;
+            // Custom description for Франция; otherwise use the data description
+            const isFrance = (country && (country.code === 'france' || (country.title && country.title.toLowerCase().includes('франц'))));
+            if (descElem) {
+                if (isFrance) {
+                    descElem.innerHTML = `
+                        <p>Планируйте поездку на апрель–июнь или сентябрь–октябрь. Вы застанете лучший баланс мягкой погоды и живописных видов, избежав при этом изнуряющей летней жары и самых больших очередей.</p>
+                        <h3>ДОСТОПРИМЕЧАТЕЛЬНОСТИ СТРАНЫ</h3>
+                        <ul>
+                          <li><strong>Замки Луары:</strong> Обязательно включите их в маршрут для погружения в историю королей.</li>
+                          <li><strong>Мон-Сен-Мишель:</strong> Посетите ради уникальной архитектуры на скале.</li>
+                          <li><strong>Лион и Арль:</strong> Отправляйтесь в эти города для более глубокого знакомства с искусством и античностью.</li>
+                        </ul>
+                    `;
+                } else {
+                    descElem.innerHTML = country.description;
+                }
+            }
 
             // Update hero image
             const imgElem = document.querySelector(".main-image-container img");
             if(imgElem) imgElem.src = country.image;
 
-            // Seasonality and attractions widgets
-            renderSeasonalityWidget(country);
-            renderAttractionsWidget(country);
+            // Temporarily hide seasonality and attractions widgets per request
+            const seasonEl = document.querySelector('.seasonality-widget');
+            if (seasonEl) seasonEl.style.display = 'none';
+            const attractionsEl = document.querySelector('.attractions-widget');
+            if (attractionsEl) attractionsEl.style.display = 'none';
 
             // Update hotels (use hotels.json)
             const hotelGrid = document.querySelector(".hotel-grid");
@@ -537,52 +555,91 @@ if (isHotelPage) {
             } catch (e) { console.warn('Could not restore compare selection', e); }
 
             const hotelsForCountry = hotelsData.filter(h => h.country_code === countryName);
-            if(hotelGrid){
+            if (hotelGrid) {
                 hotelGrid.innerHTML = "";
-                hotelsForCountry.forEach(hotel => {
-                    const card = document.createElement('div');
-                    card.className = 'hotel-card';
-                    card.dataset.name = hotel.name || '';
-                    card.dataset.tags = ((hotel.tags_standard && hotel.tags_standard.length) ? hotel.tags_standard.map(t => '#' + t) : (hotel.tags || [])).join(' ') || '';
-                    card.dataset.desc = hotel.desc || '';
-                    card.dataset.price = hotel.price || '';
-                    card.dataset.country = hotel.country_code || '';
 
-                    card.addEventListener('click', () => {
-                        window.location.href = `hotel.html?country=${countryName}&hotel=${encodeURIComponent(hotel.name)}`;
-                    });
-
-                    card.innerHTML = `
-                      <img src="${hotel.image}">
-                      <div class="hotel-content-block">
-                          <div class="hotel-info">
-                              <div class="hotel-header">
-                                  <h3>${hotel.name}</h3>
-                                  <span class="rating">${hotel.rating}</span>
-                              </div>
-                              <div class="hotel-badges"><span class="badge level">${hotel.level || ''}</span><span class="badge district">${hotel.district || ''}</span></div>
-                              <div class="tags">${((hotel.tags_standard && hotel.tags_standard.length) ? hotel.tags_standard.map(t => '#' + t) : (hotel.tags || [])).join(' ')}</div>
-                              <div class="price">${hotel.price}</div>
-                          </div>
-                          <p class="hotel-desc">${hotel.desc}</p>
-                          <p class="suitable-for">${hotel.suitable_for || ''}</p>
-                      </div>`;
-
-                    // add compare checkbox (do not trigger card navigation when clicking checkbox)
-                    const compareWrap = document.createElement('div');
-                    compareWrap.className = 'compare-wrapper';
-                    compareWrap.innerHTML = `<label><input type="checkbox" class="compare-checkbox"> Сравнить</label>`;
-                    const chk = compareWrap.querySelector('input.compare-checkbox');
-                    // set initial checked state according to restored selection
-                    try { chk.checked = !!compareSelection.find(x => x.name === hotel.name); } catch(e){}
-                    chk.addEventListener('click', (e) => e.stopPropagation());
-                    chk.addEventListener('change', () => {
-                        if (chk.checked) addHotelToCompare(hotel); else removeHotelFromCompare(hotel);
-                    });
-                    card.appendChild(compareWrap);
-
-                    hotelGrid.appendChild(card);
+                // group hotels by level and render groups with large cards (as requested)
+                const groups = {};
+                hotelsForCountry.forEach(h => {
+                    const lvl = h.level || 'Разный уровень';
+                    if (!groups[lvl]) groups[lvl] = [];
+                    groups[lvl].push(h);
                 });
+
+                const keys = Object.keys(groups).sort((a, b) => {
+                    const na = parseInt(a) || (a.includes('5') ? 5 : (a.includes('4') ? 4 : 0));
+                    const nb = parseInt(b) || (b.includes('5') ? 5 : (b.includes('4') ? 4 : 0));
+                    return nb - na;
+                });
+
+                keys.forEach(levelKey => {
+                    const groupHotels = groups[levelKey];
+                    // group container and header
+                    const groupContainer = document.createElement('div');
+                    groupContainer.className = 'hotel-group';
+                    const groupHeader = document.createElement('div');
+                    groupHeader.className = 'hotel-group-header';
+                    const priceEx = getPriceExamplesForGroup(groupHotels);
+                    groupHeader.innerHTML = `<h3>${levelKey}</h3><div class="group-price-examples">Примерные цены: ${priceEx}</div>`;
+                    groupContainer.appendChild(groupHeader);
+
+                    groupHotels.forEach(hotel => {
+                        const card = document.createElement('div');
+                        card.className = 'hotel-card';
+                        card.dataset.name = hotel.name || '';
+                        card.dataset.tags = ((hotel.tags_standard && hotel.tags_standard.length) ? hotel.tags_standard.map(t => '#' + t) : (hotel.tags || [])).join(' ') || '';
+                        card.dataset.desc = hotel.desc || '';
+                        card.dataset.price = hotel.price || '';
+                        card.dataset.country = hotel.country_code || '';
+
+                        card.addEventListener('click', () => {
+                            window.location.href = `hotel.html?country=${countryName}&hotel=${encodeURIComponent(hotel.name)}`;
+                        });
+
+                        const hasPool = ((hotel.features || []).join(' ').toLowerCase().includes('бассейн') || (hotel.tags_standard || []).join(' ').toLowerCase().includes('бассейн') || (hotel.tags || []).join(' ').toLowerCase().includes('бассейн') || (hotel.desc || '').toLowerCase().includes('бассейн'));
+
+                        card.innerHTML = `
+                          <img src="${hotel.image}">
+                          <div class="hotel-content-block">
+                              <div class="hotel-info">
+                                  <div class="hotel-header">
+                                      <h3>${hotel.name}</h3>
+                                      <span class="rating">${hotel.rating}</span>
+                                  </div>
+                                  <div class="hotel-badges"><span class="badge level">${hotel.level || ''}</span><span class="badge district">${hotel.district || ''}</span></div>
+                                  <div class="tags">${((hotel.tags_standard && hotel.tags_standard.length) ? hotel.tags_standard.map(t => '#' + t) : (hotel.tags || [])).join(' ')}</div>
+                                  <div class="price">${hotel.price}</div>
+                                  <div class="hotel-pool-note">${hasPool ? 'С бассейном' : 'Без бассейна'}</div>
+                              </div>
+                              <p class="hotel-desc">${hotel.desc}</p>
+                              <p class="suitable-for">${hotel.suitable_for || ''}</p>
+                          </div>`;
+
+                        // add compare checkbox (do not trigger card navigation when clicking checkbox)
+                        const compareWrap = document.createElement('div');
+                        compareWrap.className = 'compare-wrapper';
+                        compareWrap.innerHTML = `<label><input type="checkbox" class="compare-checkbox"> Сравнить</label>`;
+                        const chk = compareWrap.querySelector('input.compare-checkbox');
+                        try { chk.checked = !!compareSelection.find(x => x.name === hotel.name); } catch(e){}
+                        chk.addEventListener('click', (e) => e.stopPropagation());
+                        chk.addEventListener('change', () => {
+                            if (chk.checked) addHotelToCompare(hotel); else removeHotelFromCompare(hotel);
+                        });
+                        card.appendChild(compareWrap);
+
+                        groupContainer.appendChild(card);
+                    });
+
+                    hotelGrid.appendChild(groupContainer);
+                });
+
+                // if no groups were added, show a friendly message
+                if (!keys.length) {
+                    hotelGrid.innerHTML = '<div class="no-results" style="padding:20px;text-align:center;">Нет доступных отелей для этой страны.</div>';
+                }
+
+                // ensure header-only offers block present
+                try { renderOffersSection(hotelsForCountry); } catch(e) { /* ignore */ }
             }
         } else {
             console.error("Country not found in data");
@@ -700,6 +757,50 @@ function initComments(hotel) {
     });
 
     loadComments();
+}
+
+// Render a compact offers block below the hero: grouped by hotel `level`, showing sample hotels
+function renderOffersSection(hotels) {
+    let offers = document.getElementById('country-offers');
+    if (!offers) {
+        offers = document.createElement('section');
+        offers.id = 'country-offers';
+        offers.className = 'country-offers';
+        const hero = document.querySelector('.country-hero');
+        const compareInst = document.querySelector('.compare-instructions');
+        if (hero && compareInst && hero.parentNode) hero.parentNode.insertBefore(offers, compareInst);
+        else if (hero && hero.parentNode) hero.parentNode.insertBefore(offers, hero.nextSibling);
+        else {
+            const hg = document.querySelector('.hotel-grid');
+            if (hg && hg.parentNode) hg.parentNode.insertBefore(offers, hg);
+            else document.body.appendChild(offers);
+        }
+    }
+
+    // Per request: this block contains only the header. The full hotel recommendations
+    // are rendered below in the large grouped cards.
+    offers.innerHTML = '<h3>МОЖЕМ ВАМ ПРЕДЛОЖИТЬ ОТЕЛИ РАЗНОГО УРОВНЯ:</h3>';
+}
+
+// Helper: try to extract numeric price examples for a group of hotels
+function getPriceExamplesForGroup(hotels) {
+    if (!hotels || !hotels.length) return '—';
+    const prices = hotels.map(h => (h.price || '').trim()).filter(Boolean);
+    if (!prices.length) return '—';
+    const nums = prices.map(p => {
+        const m = p.replace(/\s+/g,'').match(/[\d,.]+/);
+        if (!m) return NaN;
+        const s = m[0].replace(/,/g,'.');
+        return parseFloat(s);
+    }).filter(n => !isNaN(n));
+    if (nums.length) {
+        const min = Math.min(...nums);
+        const max = Math.max(...nums);
+        if (min === max) return prices[0];
+        return `${Math.round(min).toLocaleString('ru-RU')} — ${Math.round(max).toLocaleString('ru-RU')}`;
+    }
+    const uniq = [...new Set(prices)];
+    return uniq.slice(0,3).join(' / ');
 }
 
 // ------------------ Search / Filtering ------------------
