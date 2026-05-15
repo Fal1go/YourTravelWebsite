@@ -201,6 +201,7 @@ document.querySelectorAll(".vacation-types-container p")
     item.addEventListener("click", () => {
         const type = item.dataset.type;
         renderCards(type);
+        renderSmartRecommendations(type);
         // Re-run search to filter newly rendered cards (if user typed something)
         const searchInput = document.querySelector('.search-bar input');
         if (searchInput && searchInput.value.trim()) {
@@ -212,6 +213,9 @@ document.querySelectorAll(".vacation-types-container p")
 // Render first grid (only on index page)
 if (document.getElementById("countryGrid")) {
     renderCards("culture");
+
+    // initial smart recommendations for default type
+    renderSmartRecommendations('culture');
 }
 
 // Get country from URL
@@ -223,6 +227,9 @@ const hotelParam = params.get("hotel");
 let hotelsData = [];
 // текущий список отелей для сравнения
 let compareSelection = [];
+// countries.json and local guides loaded dynamically
+let countriesJsonData = {};
+let localGuidesData = {};
 
 function saveCompareSelection() {
     try {
@@ -497,9 +504,13 @@ if (isHotelPage) {
     // Index / country page: load countries.json and hotels.json
     Promise.all([
         fetch('countries.json').then(r => r.json()),
-        fetch('hotels.json').then(r => r.json()).catch(err => { console.warn('Could not load hotels.json', err); return []; })
+        fetch('hotels.json').then(r => r.json()).catch(err => { console.warn('Could not load hotels.json', err); return []; }),
+        fetch('local_guides.json').then(r => r.json()).catch(err => { console.warn('Could not load local_guides.json', err); return {}; })
     ])
-    .then(([countriesJson, hotels]) => {
+    .then(([countriesJson, hotels, localGuides]) => {
+        // persist loaded data globally for helpers
+        countriesJsonData = countriesJson || {};
+        localGuidesData = localGuides || {};
         hotelsData = hotels || [];
 
             if (countryName && countriesJson[countryName]) {
@@ -534,11 +545,8 @@ if (isHotelPage) {
             const imgElem = document.querySelector(".main-image-container img");
             if(imgElem) imgElem.src = country.image;
 
-            // Temporarily hide seasonality and attractions widgets per request
-            const seasonEl = document.querySelector('.seasonality-widget');
-            if (seasonEl) seasonEl.style.display = 'none';
-            const attractionsEl = document.querySelector('.attractions-widget');
-            if (attractionsEl) attractionsEl.style.display = 'none';
+            // Render local guide for the country
+            renderLocalGuide(countryName);
 
             // Update hotels (use hotels.json)
             const hotelGrid = document.querySelector(".hotel-grid");
@@ -641,6 +649,8 @@ if (isHotelPage) {
 
                 // ensure header-only offers block present
                 try { renderOffersSection(hotelsForCountry); } catch(e) { /* ignore */ }
+                // initialize price calendar for this country
+                try { renderPriceCalendar(countryName, hotelsForCountry); } catch(e) { /* ignore */ }
             }
         } else {
             console.error("Country not found in data");
@@ -829,6 +839,133 @@ function renderAttractionsWidget(country) {
     if (!country || !country.attractions || !country.attractions.length) { container.style.display = 'none'; return; }
     const items = country.attractions.map(a => `<div class="attraction-item"><strong>${a.name}</strong><div class="atype">${a.type}</div></div>`).join('');
     container.innerHTML = `<h3>Достопримечательности</h3><div class="attractions-list">${items}</div>`;
+}
+
+// Helpers for smart recommendations, price calendar and local guides
+function getMonthNameFromDate(date) {
+    const months = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
+    if (!date || !(date instanceof Date)) return months[new Date().getMonth()];
+    return months[date.getMonth()];
+}
+
+function computeSmartRecommendations(type, monthName, limit = 3) {
+    const month = (monthName || '').toLowerCase();
+    const byType = (countries[type] || []).map(c => c.code);
+    const results = byType.map(code => {
+        const meta = (countriesJsonData && countriesJsonData[code]) ? countriesJsonData[code] : null;
+        let score = 0;
+        if (meta && meta.seasonality) {
+            const best = (meta.seasonality.best || []).map(m => m.toLowerCase());
+            const avoid = (meta.seasonality.avoid || []).map(m => m.toLowerCase());
+            if (best.includes(month)) score += 20;
+            if (avoid.includes(month)) score -= 10;
+        }
+        // small baseline to prefer listed countries
+        score += 5;
+        const fallback = (countries[type] || []).find(c => c.code === code);
+        return { code, title: (meta && meta.title) ? meta.title : (fallback ? fallback.title : code), score, seasonality: meta && meta.seasonality };
+    });
+    results.sort((a,b) => b.score - a.score);
+    return results.slice(0, limit);
+}
+
+function renderSmartRecommendations(type) {
+    const container = document.getElementById('smartRecs');
+    if (!container) return;
+    const monthName = getMonthNameFromDate(new Date());
+    const recs = computeSmartRecommendations(type, monthName, 4);
+    container.innerHTML = `<h3>Умные рекомендации (${monthName})</h3>` +
+        `<div class="rec-list">` + recs.map(r => {
+            const inBest = r.seasonality && r.seasonality.best && r.seasonality.best.map(m=>m.toLowerCase()).includes(monthName);
+            const inAvoid = r.seasonality && r.seasonality.avoid && r.seasonality.avoid.map(m=>m.toLowerCase()).includes(monthName);
+            const badge = inBest ? 'Лучшее время' : (inAvoid ? 'Не рекомендуется' : 'Подходит');
+            return `<div class="rec-item" data-code="${r.code}">${r.title} — <em>${badge}</em></div>`;
+        }).join('') + `</div>`;
+
+    // click handlers
+    container.querySelectorAll('.rec-item').forEach(it => it.addEventListener('click', () => {
+        const code = it.dataset.code;
+        if (code) goToCountry(code);
+    }));
+}
+
+function parseNumericPrice(s) {
+    if (!s) return NaN;
+    const cleaned = String(s).replace(/\s+/g, '').replace(/,/g, '.');
+    const m = cleaned.match(/-?\d+(?:\.\d+)?/);
+    if (!m) return NaN;
+    return parseFloat(m[0]);
+}
+
+function formatPrice(n, sample) {
+    if (!isFinite(n)) return sample || '—';
+    const sym = (sample || '').replace(/[0-9\s.,]/g, '').trim();
+    return new Intl.NumberFormat('ru-RU').format(Math.round(n)) + (sym ? ' ' + sym : '');
+}
+
+function renderPriceCalendar(countryCode, hotelsForCountry) {
+    const widget = document.querySelector('.price-calendar-widget');
+    if (!widget) return;
+    const dateInput = widget.querySelector('#price-date');
+    const results = widget.querySelector('#price-results');
+    if (!dateInput || !results) return;
+
+    function updatePricesForDate(d) {
+        const dt = d || new Date();
+        const monthName = getMonthNameFromDate(dt);
+        const isWeekend = [0,6].includes(dt.getDay());
+        const season = (countriesJsonData && countriesJsonData[countryCode] && countriesJsonData[countryCode].seasonality) ? countriesJsonData[countryCode].seasonality : null;
+
+        results.innerHTML = '';
+        if (!hotelsForCountry || !hotelsForCountry.length) { results.innerHTML = '<div class="no-results">Нет данных по отелям.</div>'; return; }
+
+        hotelsForCountry.forEach(h => {
+            const base = parseNumericPrice(h.price || '');
+            if (!isFinite(base)) return;
+            let mult = 1.0;
+            if (season) {
+                const best = (season.best || []).map(m => m.toLowerCase());
+                const avoid = (season.avoid || []).map(m => m.toLowerCase());
+                if (best.includes(monthName)) mult *= 0.9;
+                if (avoid.includes(monthName)) mult *= 1.2;
+            }
+            if (isWeekend) mult *= 1.07;
+            const adj = base * mult;
+            const row = document.createElement('div');
+            row.className = 'price-row';
+            row.innerHTML = `<div class="pr-name">${h.name}</div><div class="pr-values">${formatPrice(base, h.price)} → <strong>${formatPrice(adj, h.price)}</strong></div>`;
+            results.appendChild(row);
+        });
+    }
+
+    // set default date to today if empty
+    if (!dateInput.value) {
+        const today = new Date();
+        dateInput.valueAsDate = today;
+    }
+    // initial render
+    updatePricesForDate(dateInput.valueAsDate || new Date());
+    dateInput.addEventListener('change', (e) => {
+        const d = e.target.valueAsDate || new Date(e.target.value);
+        updatePricesForDate(d);
+    });
+}
+
+function renderLocalGuide(countryCode) {
+    const container = document.getElementById('local-guide');
+    if (!container) return;
+    const guide = (localGuidesData && localGuidesData[countryCode]) ? localGuidesData[countryCode] : null;
+    if (!guide) { container.innerHTML = '<h3>Локальный справочник</h3><p>Информация отсутствует.</p>'; return; }
+    const transport = (guide.transport || []).map(t => `<span class="lg-chip">${t}</span>`).join('');
+    const apps = (guide.apps || []).map(a => `<span class="lg-chip">${a}</span>`).join('');
+    const payments = (guide.payments || []).map(p => `<span class="lg-chip">${p}</span>`).join('');
+    container.innerHTML = `
+        <h3>Локальный справочник</h3>
+        <div class="lg-section"><strong>Транспорт:</strong><div>${transport || '—'}</div></div>
+        <div class="lg-section"><strong>Рекомендуемые приложения:</strong><div>${apps || '—'}</div></div>
+        <div class="lg-section"><strong>Оплаты:</strong><div>${payments || '—'}</div></div>
+        <div class="lg-section"><strong>Совет:</strong><div>${guide.tips || '—'}</div></div>
+    `;
 }
 
 function displayFeatures(hotel) {

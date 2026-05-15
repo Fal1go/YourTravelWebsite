@@ -639,6 +639,24 @@ body {
 .attraction-item { padding:10px; background:white; border-radius:8px; border:1px solid rgba(0,0,0,0.04); }
 .attraction-item .atype { font-size:0.85rem; color:#666; margin-top:6px; }
 
+/* Smart recommendations on index */
+.smart-recommendations{ background:white; border:1px solid rgba(0,0,0,0.04); padding:12px 16px; border-radius:8px; margin: 18px 3%; max-width: 1200px; }
+.smart-recommendations h3{ margin:0 0 8px 0; }
+.smart-recommendations .rec-list{ display:flex; gap:12px; flex-wrap:wrap; }
+.smart-recommendations .rec-item{ padding:8px 10px; background:#f7fbff; border-radius:8px; cursor:pointer; border:1px solid rgba(0,0,0,0.04); }
+
+/* Price calendar & local guide */
+.price-calendar-widget{ background:white; border:1px solid rgba(0,0,0,0.04); padding:12px 16px; border-radius:8px; margin-top:12px; }
+.price-calendar-widget label{ display:block; margin-bottom:8px; }
+.price-calendar-widget input[type="date"]{ padding:6px 8px; border-radius:6px; border:1px solid rgba(0,0,0,0.08); }
+.price-calendar-widget .price-row{ display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed rgba(0,0,0,0.04); }
+.price-calendar-widget .price-row:last-child{ border-bottom:none; }
+
+.local-guide-widget{ background:white; border:1px solid rgba(0,0,0,0.04); padding:12px 16px; border-radius:8px; margin-top:12px; }
+.local-guide-widget h3{ margin-top:0; }
+.local-guide-widget .lg-section{ margin:6px 0; }
+.local-guide-widget .lg-chip{ display:inline-block; padding:6px 8px; background:#eef6ff; border-radius:8px; margin:4px 6px 4px 0; }
+
 /* Compact pros/cons preview for hotel cards */
 .card-pros-cons { display:flex; gap:12px; margin-top:8px; align-items:flex-start; }
 .card-pros-cons .card-pros, .card-pros-cons .card-cons { flex:1; font-size:0.9rem; }
