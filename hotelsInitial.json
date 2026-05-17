@@ -27,12 +27,6 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": [
-      {
-        "author": "Марина",
-        "text": "Отличное соотношение цены и качества."
-      }
     ]
   },
   {
@@ -64,8 +58,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Kazakhstan Grand Hotel",
@@ -96,8 +89,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Budget Inn",
@@ -127,8 +119,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Comfort Hotel",
@@ -158,8 +149,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Grand Palace",
@@ -190,12 +180,6 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": [
-      {
-        "author": "Мадина",
-        "text": "Потрясающий вид на Эйфелеву башню!"
-      }
     ]
   },
   {
@@ -226,8 +210,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Atoll Comfort Resort",
@@ -257,8 +240,7 @@
     ],
     "tags_standard": [
       "пляж"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Maldives Water Villas",
@@ -290,12 +272,6 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": [
-      {
-        "author": "Милана",
-        "text": "Это был лучший медовый месяц!"
-      }
     ]
   },
   {
@@ -326,8 +302,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Nile Comfort Hotel",
@@ -358,8 +333,7 @@
     ],
     "tags_standard": [
       "рядом с рекой"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Cairo Grand Palace",
@@ -390,12 +364,6 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": [
-      {
-        "author": "Алихан",
-        "text": "Сервис на высшем уровне, пирамиды совсем рядом."
-      }
     ]
   },
   {
@@ -426,8 +394,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Comfort Hotel",
@@ -457,8 +424,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Grand Hotel",
@@ -489,8 +455,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Budget Inn",
@@ -520,8 +485,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Comfort Suites",
@@ -552,8 +516,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Grand Palace",
@@ -584,8 +547,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Budget Inn",
@@ -615,12 +577,6 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": [
-      {
-        "author": "Егор",
-        "text": "Чисто, уютно и технологично."
-      }
     ]
   },
   {
@@ -652,8 +608,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Grand Imperial",
@@ -684,8 +639,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Budget Inn",
@@ -715,8 +669,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Comfort Suites",
@@ -746,8 +699,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Grand Harbor",
@@ -779,8 +731,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Budget Inn",
@@ -810,8 +761,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Comfort Suites",
@@ -841,8 +791,7 @@
     ],
     "tags_standard": [
       "вид на море"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Grand View",
@@ -874,8 +823,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Budget Inn",
@@ -905,8 +853,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Comfort Hotel",
@@ -937,8 +884,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Bosphorus Palace",
@@ -970,8 +916,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Budget Inn",
@@ -1001,8 +946,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Comfort Hotel",
@@ -1032,8 +976,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Alpine Grand",
@@ -1065,8 +1008,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Budget Inn",
@@ -1096,8 +1038,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Comfort Hotel",
@@ -1127,8 +1068,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Fjord Grand",
@@ -1160,8 +1100,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Budget Inn",
@@ -1191,8 +1130,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Comfort Hotel",
@@ -1222,8 +1160,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Grand Resort",
@@ -1253,8 +1190,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Budget Inn",
@@ -1284,8 +1220,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Comfort Suites",
@@ -1315,8 +1250,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Grand Palace",
@@ -1347,8 +1281,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Budget Inn",
@@ -1378,8 +1311,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Comfort Hotel",
@@ -1409,8 +1341,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Grand Palace",
@@ -1441,8 +1372,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Budget Inn",
@@ -1472,8 +1402,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Comfort Hotel",
@@ -1503,8 +1432,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Grand Palace",
@@ -1535,8 +1463,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Budget Inn",
@@ -1566,8 +1493,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Comfort Suites",
@@ -1597,8 +1523,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Grand Hotel",
@@ -1629,8 +1554,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Reykjavik Budget Inn",
@@ -1660,8 +1584,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Blue Lagoon Comfort",
@@ -1692,8 +1615,7 @@
     ],
     "tags_standard": [
       "спа"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Iceland Grand Resort",
@@ -1724,8 +1646,7 @@
     ],
     "tags_standard": [
       "аурора"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Arenal Eco Lodge",
@@ -1756,8 +1677,7 @@
     ],
     "tags_standard": [
       "эко"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Pacific Comfort Resort",
@@ -1788,8 +1708,7 @@
     ],
     "tags_standard": [
       "пляж"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Costa Rica Grand Hotel",
@@ -1821,8 +1740,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Kazakhstan Grand Hotel Palace",
@@ -1853,8 +1771,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Almaty Comfort Hotel Suites",
@@ -1885,8 +1802,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Astana Budget Inn Annex",
@@ -1916,8 +1832,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Astana Budget Inn Economy",
@@ -1947,8 +1862,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Astana Budget Inn Traveler",
@@ -1978,8 +1892,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Grand Palace Palace",
@@ -2010,8 +1923,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Comfort Hotel Suites",
@@ -2041,8 +1953,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Budget Inn Annex",
@@ -2072,8 +1983,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Budget Inn Economy",
@@ -2103,8 +2013,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Paris Budget Inn Traveler",
@@ -2134,8 +2043,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Maldives Water Villas Palace",
@@ -2167,8 +2075,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Atoll Comfort Resort Suites",
@@ -2198,8 +2105,7 @@
     ],
     "tags_standard": [
       "пляж"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Male Budget Inn Annex",
@@ -2229,8 +2135,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Male Budget Inn Economy",
@@ -2260,8 +2165,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Male Budget Inn Traveler",
@@ -2291,8 +2195,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Cairo Grand Palace Palace",
@@ -2323,8 +2226,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Nile Comfort Hotel Suites",
@@ -2355,8 +2257,7 @@
     ],
     "tags_standard": [
       "рядом с рекой"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Cairo Budget Stay Annex",
@@ -2386,8 +2287,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Cairo Budget Stay Economy",
@@ -2417,8 +2317,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Cairo Budget Stay Traveler",
@@ -2448,8 +2347,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Grand Hotel Palace",
@@ -2480,8 +2378,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Comfort Hotel Suites",
@@ -2511,8 +2408,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Budget Inn Annex",
@@ -2542,8 +2438,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Budget Inn Economy",
@@ -2573,8 +2468,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Rome Budget Inn Traveler",
@@ -2604,8 +2498,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Grand Palace Palace",
@@ -2636,8 +2529,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Comfort Suites Suites",
@@ -2668,8 +2560,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Budget Inn Annex",
@@ -2699,8 +2590,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Budget Inn Economy",
@@ -2730,8 +2620,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Bangkok Budget Inn Traveler",
@@ -2761,8 +2650,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Grand Imperial Palace",
@@ -2793,8 +2681,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Comfort Hotel Suites",
@@ -2825,8 +2712,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Budget Inn Annex",
@@ -2856,8 +2742,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Budget Inn Economy",
@@ -2887,8 +2772,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Tokyo Budget Inn Traveler",
@@ -2918,8 +2802,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Grand Harbor Palace",
@@ -2951,8 +2834,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Comfort Suites Suites",
@@ -2982,8 +2864,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Budget Inn Annex",
@@ -3013,8 +2894,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Budget Inn Economy",
@@ -3044,8 +2924,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Sydney Budget Inn Traveler",
@@ -3075,8 +2954,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Grand View Palace",
@@ -3108,8 +2986,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Comfort Suites Suites",
@@ -3139,8 +3016,7 @@
     ],
     "tags_standard": [
       "вид на море"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Budget Inn Annex",
@@ -3170,8 +3046,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Budget Inn Economy",
@@ -3201,8 +3076,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Santorini Budget Inn Traveler",
@@ -3232,8 +3106,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Bosphorus Palace Palace",
@@ -3265,8 +3138,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Comfort Hotel Suites",
@@ -3297,8 +3169,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Budget Inn Annex",
@@ -3328,8 +3199,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Budget Inn Economy",
@@ -3359,8 +3229,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Istanbul Budget Inn Traveler",
@@ -3390,8 +3259,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Alpine Grand Palace",
@@ -3423,8 +3291,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Comfort Hotel Suites",
@@ -3454,8 +3321,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Budget Inn Annex",
@@ -3485,8 +3351,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Budget Inn Economy",
@@ -3516,8 +3381,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Zurich Budget Inn Traveler",
@@ -3547,8 +3411,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Fjord Grand Palace",
@@ -3580,8 +3443,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Comfort Hotel Suites",
@@ -3611,8 +3473,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Budget Inn Annex",
@@ -3642,8 +3503,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Budget Inn Economy",
@@ -3673,8 +3533,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Oslo Budget Inn Traveler",
@@ -3704,8 +3563,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Grand Resort Palace",
@@ -3735,8 +3593,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Comfort Hotel Suites",
@@ -3766,8 +3623,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Budget Inn Annex",
@@ -3797,8 +3653,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Budget Inn Economy",
@@ -3828,8 +3683,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Queenstown Budget Inn Traveler",
@@ -3859,8 +3713,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Grand Palace Palace",
@@ -3891,8 +3744,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Comfort Suites Suites",
@@ -3922,8 +3774,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Budget Inn Annex",
@@ -3953,8 +3804,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Budget Inn Economy",
@@ -3984,8 +3834,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "NYC Budget Inn Traveler",
@@ -4015,8 +3864,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Grand Palace Palace",
@@ -4047,8 +3895,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Comfort Hotel Suites",
@@ -4078,8 +3925,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Budget Inn Annex",
@@ -4109,8 +3955,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Budget Inn Economy",
@@ -4140,8 +3985,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Berlin Budget Inn Traveler",
@@ -4171,8 +4015,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Grand Palace Palace",
@@ -4203,8 +4046,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Comfort Hotel Suites",
@@ -4234,8 +4076,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Budget Inn Annex",
@@ -4265,8 +4106,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Budget Inn Economy",
@@ -4296,8 +4136,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Seoul Budget Inn Traveler",
@@ -4327,8 +4166,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Grand Hotel Palace",
@@ -4359,8 +4197,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Comfort Suites Suites",
@@ -4390,8 +4227,7 @@
     ],
     "tags_standard": [
       "комфорт"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Budget Inn Annex",
@@ -4421,8 +4257,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Budget Inn Economy",
@@ -4452,8 +4287,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Toronto Budget Inn Traveler",
@@ -4483,8 +4317,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Iceland Grand Resort Palace",
@@ -4515,8 +4348,7 @@
     ],
     "tags_standard": [
       "аурора"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Blue Lagoon Comfort Suites",
@@ -4547,8 +4379,7 @@
     ],
     "tags_standard": [
       "спа"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Reykjavik Budget Inn Annex",
@@ -4578,8 +4409,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Reykjavik Budget Inn Economy",
@@ -4609,8 +4439,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Reykjavik Budget Inn Traveler",
@@ -4640,8 +4469,7 @@
     ],
     "tags_standard": [
       "бюджет"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Costa Rica Grand Hotel Palace",
@@ -4673,8 +4501,7 @@
     ],
     "tags_standard": [
       "люкс"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Pacific Comfort Resort Suites",
@@ -4705,8 +4532,7 @@
     ],
     "tags_standard": [
       "пляж"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Arenal Eco Lodge Annex",
@@ -4737,8 +4563,7 @@
     ],
     "tags_standard": [
       "эко"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Arenal Eco Lodge Economy",
@@ -4769,8 +4594,7 @@
     ],
     "tags_standard": [
       "эко"
-    ],
-    "comments": []
+    ]
   },
   {
     "name": "Arenal Eco Lodge Traveler",
@@ -4801,7 +4625,6 @@
     ],
     "tags_standard": [
       "эко"
-    ],
-    "comments": []
+    ]
   }
 ]

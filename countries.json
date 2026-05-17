@@ -289,4 +289,174 @@
       }
     ]
   }
+  ,
+  "greece": {
+    "title": "ГРЕЦИЯ",
+    "description": "<p><strong>Греция</strong> — страна античных руин, белых домиков и лазурного моря. Здесь сочетаются богатая история и идиллические пляжи.</p>\n<h3>Города и культура</h3>\n<p>Афины с Акрополем, древние памятники и уютные островные поселения создают уникальную средиземноморскую атмосферу.</p>\n<h3>Острова и природа</h3>\n<p>Санторини, Крит, Миконос и другие острова предлагают красивые пляжи, винные традиции и неповторимые пейзажи.</p>",
+    "image": "https://plus.unsplash.com/premium_photo-1675375678457-d70708bf77c8?w=500",
+    "seasonality": { "best": ["май", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Акрополь", "type": "архитектура" },
+      { "name": "Санторини (Ойя)", "type": "природа" },
+      { "name": "Дельфы", "type": "история" }
+    ],
+    "hotels": [
+      { "name": "Canaves Oia Hotel", "rating": "4.7 ★", "price": "180 000 ₸", "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=500", "tags": "#ОСТРОВ #ВИДНАМОРЕ", "desc": "Бутик-отель с видом на кальдеру и закат." },
+      { "name": "Electra Palace Athens", "rating": "4.6 ★", "price": "95 000 ₸", "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400", "tags": "#ПАРК #ЦЕНТР", "desc": "Классический городской отель рядом с историческими улицами Афин." },
+      { "name": "Crete Beach Resort", "rating": "4.5 ★", "price": "72 000 ₸", "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500", "tags": "#ПЛЯЖ #СЕМЕЙНЫЙ", "desc": "Комфортный курорт на Крите с разнообразием развлечений." }
+    ]
+  },
+  "turkey": {
+    "title": "TУРЦИЯ",
+    "description": "<p><strong>Турция</strong> — страна контрастов между европейской и азиатской культурами, с богатой историей и пляжными курортами.</p>\n<h3>Города и регионы</h3>\n<p>Стамбул, Каппадокия и побережье Эгейского и Средиземного морей предлагают разные виды отдыха.</p>",
+    "image": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=500",
+    "seasonality": { "best": ["май", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Голубая мечеть", "type": "архитектура" },
+      { "name": "Каппадокия (вулк. ландшафты)", "type": "природа" },
+      { "name": "Эфес", "type": "история" }
+    ],
+    "hotels": [
+      { "name": "Çırağan Palace Kempinski", "rating": "4.8 ★", "price": "120 000 ₸", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400", "tags": "#ЛЮКС #СПА", "desc": "Роскошный дворцовый отель на берегу Босфора." },
+      { "name": "Museum Hotel Cappadocia", "rating": "4.7 ★", "price": "95 000 ₸", "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400", "tags": "#КАППАДОКИЯ #БУТИК", "desc": "Уникальный бутик-отель среди каменных формаций." },
+      { "name": "Bodrum Sea Resort", "rating": "4.5 ★", "price": "68 000 ₸", "image": "https://images.unsplash.com/photo-1626258607001-88235bc4aefd?q=80&w=736", "tags": "#ПЛЯЖ #ОТДЫХ", "desc": "Комфортный отель на Эгейском побережье." }
+    ]
+  },
+  "switzerland": {
+    "title": "ШВЕЙЦАРИЯ",
+    "description": "<p><strong>Швейцария</strong> — страна гор, озёр и горнолыжных курортов. Идеальна для активного отдыха и спокойного уединения.</p>\n<h3>Природа</h3>\n<p>Альпы предлагают лыжные трассы, пешие маршруты и живописные альпийские деревни.</p>",
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500",
+    "seasonality": { "best": ["июль", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Маттерхорн", "type": "природа" },
+      { "name": "Женевское озеро", "type": "природа" },
+      { "name": "Церматт", "type": "курорт" }
+    ],
+    "hotels": [
+      { "name": "The Dolder Grand", "rating": "4.8 ★", "price": "320 000 ₸", "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400", "tags": "#ЛЮКС #ВИДНАГОРЫ", "desc": "Элегантный отель с панорамными видами на Альпы." },
+      { "name": "Hotel Monte Rosa Zermatt", "rating": "4.6 ★", "price": "170 000 ₸", "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400", "tags": "#СКИ #КУРОРТ", "desc": "Уютный отель в альпийской деревушке Церматт." },
+      { "name": "Geneva Lakeside Hotel", "rating": "4.5 ★", "price": "150 000 ₸", "image": "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500", "tags": "#ОЗЕРО #СПА", "desc": "Отель на берегу Женевского озера с хорошими удобствами." }
+    ]
+  },
+  "norway": {
+    "title": "НОРВЕГИЯ",
+    "description": "<p><strong>Норвегия</strong> — страна фьордов, северного сияния и нетронутой природы. Идеальна для любителей природы и активного туризма.</p>",
+    "image": "https://images.unsplash.com/photo-1501117716987-c8e6a71d2c8b?q=80&w=400",
+    "seasonality": { "best": ["июнь", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Фьорды", "type": "природа" },
+      { "name": "Северное сияние", "type": "природа" }
+    ],
+    "hotels": [
+      { "name": "Fjord View Hotel", "rating": "4.6 ★", "price": "150 000 ₸", "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500", "tags": "#ФЬОРД #ПРИРОДА", "desc": "Отель с видом на фьорд и прогулками на природе." },
+      { "name": "Oslo Central", "rating": "4.5 ★", "price": "120 000 ₸", "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400", "tags": "#ЦЕНТР #КУЛЬТУРА", "desc": "Городской отель в Осло, удобный для осмотра достопримечательностей." },
+      { "name": "Tromso Aurora Lodge", "rating": "4.7 ★", "price": "140 000 ₸", "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400", "tags": "#АУРОРА #ПРИРОДА", "desc": "Лодж в северной Норвегии для охоты за северным сиянием." }
+    ]
+  },
+  "new zeland": {
+    "title": "НОВАЯ ЗЕЛАНДИЯ",
+    "description": "<p><strong>Новая Зеландия</strong> — страна драматических пейзажей: горы, озёра и зелёные долины. Отличное место для приключений и активного отдыха.</p>",
+    "image": "https://images.unsplash.com/photo-1501117716987-c8e6a71d2c8b?q=80&w=400",
+    "seasonality": { "best": ["январь", "февраль"], "avoid": ["июнь"] },
+    "attractions": [
+      { "name": "Фьорд Милфорд", "type": "природа" },
+      { "name": "Хоббитон", "type": "кино/туризм" }
+    ],
+    "hotels": [
+      { "name": "Milford Sound Lodge", "rating": "4.7 ★", "price": "130 000 ₸", "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500", "tags": "#ФЬОРД #ПРИРОДА", "desc": "Лодж рядом с фьордом с экскурсиями на лодке." },
+      { "name": "Rotorua Spa Resort", "rating": "4.6 ★", "price": "110 000 ₸", "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400", "tags": "#СПА #ГЕОТЕРМИЯ", "desc": "Курорт в районе геотермальных источников." },
+      { "name": "Queenstown Lake Hotel", "rating": "4.5 ★", "price": "125 000 ₸", "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400", "tags": "#ОЗЕРО #ПРИКЛЮЧЕНИЯ", "desc": "Отель на берегу озера с активными развлечениями." }
+    ]
+  },
+  "usa": {
+    "title": "США",
+    "description": "<p><strong>США</strong> — огромная и разнообразная страна: мегаполисы, национальные парки и культовые достопримечательности.</p>\n<h3>Города</h3>\n<p>Нью-Йорк, Лос-Анджелес, Чикаго и другие крупные города предлагают культурные и гастрономические впечатления.</p>",
+    "image": "https://images.unsplash.com/photo-1502950957631-2d6e5f8a1f2b?q=80&w=500",
+    "seasonality": { "best": ["май", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Нью-Йорк (Манхэттен)", "type": "город" },
+      { "name": "Гранд-Каньон", "type": "природа" },
+      { "name": "Йеллоустоун", "type": "природа" }
+    ],
+    "hotels": [
+      { "name": "Central Park Luxury", "rating": "4.8 ★", "price": "350 000 ₸", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400", "tags": "#ЦЕНТР #ЛЮКС", "desc": "Роскошный отель рядом с Центральным парком." },
+      { "name": "LA Beach Resort", "rating": "4.6 ★", "price": "200 000 ₸", "image": "https://images.unsplash.com/photo-1626258607001-88235bc4aefd?q=80&w=736", "tags": "#ПЛЯЖ #ЛА", "desc": "Курорт на побережье Калифорнии." },
+      { "name": "Grand Canyon Lodge", "rating": "4.5 ★", "price": "95 000 ₸", "image": "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500", "tags": "#ПРИРОДА #КАНЬОН", "desc": "Удобный отель для посещения Гранд-Каньона." }
+    ]
+  },
+  "germany": {
+    "title": "ГЕРМАНИЯ",
+    "description": "<p><strong>Германия</strong> — сочетание истории, современной культуры и живописных регионов, таких как Бавария и Рейн.</p>",
+    "image": "https://images.unsplash.com/photo-1501117716987-c8e6a71d2c8b?q=80&w=400",
+    "seasonality": { "best": ["май", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Берлин (музеи)", "type": "город" },
+      { "name": "Рейнские замки", "type": "история" }
+    ],
+    "hotels": [
+      { "name": "Berlin Central Hotel", "rating": "4.6 ★", "price": "120 000 ₸", "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400", "tags": "#ЦЕНТР #ДИЗАЙН", "desc": "Удобный отель в центре Берлина." },
+      { "name": "Bavaria Palace", "rating": "4.7 ★", "price": "140 000 ₸", "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400", "tags": "#БАВАРИЯ #ЗАМКИ", "desc": "Отель рядом с живописными баварскими ландшафтами." },
+      { "name": "Rhine Riverside Inn", "rating": "4.5 ★", "price": "98 000 ₸", "image": "https://images.unsplash.com/photo-1626258607001-88235bc4aefd?q=80&w=736", "tags": "#РЕЙН #ПРИРОДА", "desc": "Гостиница у реки с уютной атмосферой." }
+    ]
+  },
+  "south-korea": {
+    "title": "ЮЖНАЯ КОРЕЯ",
+    "description": "<p><strong>Южная Корея</strong> — динамичная страна с современной культурой, технологическими центрами и богатой поп-культурой.</p>",
+    "image": "https://images.unsplash.com/photo-1557409518-691ebcd96038?w=500",
+    "seasonality": { "best": ["апрель", "октябрь"], "avoid": ["июль"] },
+    "attractions": [
+      { "name": "Сеул (храмы и рынки)", "type": "город" },
+      { "name": "Остров Чеджу", "type": "природа" }
+    ],
+    "hotels": [
+      { "name": "Seoul Grand Hotel", "rating": "4.6 ★", "price": "110 000 ₸", "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400", "tags": "#ЦЕНТР #КУЛЬТУРА", "desc": "Современный отель в центре Сеула." },
+      { "name": "Jeju Island Resort", "rating": "4.7 ★", "price": "125 000 ₸", "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400", "tags": "#ПЛЯЖ #ПРИРОДА", "desc": "Курорт на острове Чеджу с видом на океан." },
+      { "name": "Busan Bay Hotel", "rating": "4.5 ★", "price": "95 000 ₸", "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400", "tags": "#ПЛЯЖ #ГОРОД", "desc": "Отель в Пусане рядом с бухтой и рынками." }
+    ]
+  },
+  "canada": {
+    "title": "КАНАДА",
+    "description": "<p><strong>Канада</strong> — страна бескрайних лесов, озёр и горных панорам. Подходит для любителей природы и экотуризма.</p>",
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500",
+    "seasonality": { "best": ["июль", "сентябрь"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Скалистые горы", "type": "природа" },
+      { "name": "Национальные парки", "type": "природа" }
+    ],
+    "hotels": [
+      { "name": "Rocky Mountain Retreat", "rating": "4.7 ★", "price": "140 000 ₸", "image": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=400", "tags": "#ГОРЫ #ПРИРОДА", "desc": "Лодж у подножия Скалистых гор." },
+      { "name": "Toronto City Suites", "rating": "4.5 ★", "price": "120 000 ₸", "image": "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500", "tags": "#ЦЕНТР #ГОРОД", "desc": "Городской отель в Торонто рядом с достопримечательностями." },
+      { "name": "Vancouver Bay Hotel", "rating": "4.6 ★", "price": "130 000 ₸", "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=400", "tags": "#ПРИРОДА #ГОРОД", "desc": "Отель с видом на залив и удобным доступом к природе." }
+    ]
+  },
+  "iceland": {
+    "title": "ИСЛАНДИЯ",
+    "description": "<p><strong>Исландия</strong> — страна вулканов, гейзеров и ледников. Уникальная природа идеально подходит для экспедиций и пейзажной фотографии.</p>",
+    "image": "https://images.unsplash.com/photo-1501117716987-c8e6a71d2c8b?q=80&w=400",
+    "seasonality": { "best": ["июнь", "август"], "avoid": ["январь"] },
+    "attractions": [
+      { "name": "Голубая лагуна", "type": "природа" },
+      { "name": "Гейзеры", "type": "природа" }
+    ],
+    "hotels": [
+      { "name": "Reykjavik Central", "rating": "4.5 ★", "price": "110 000 ₸", "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400", "tags": "#ЦЕНТР #АУРОРА", "desc": "Удобный отель в Рейкьявике для осмотра достопримечательностей." },
+      { "name": "Blue Lagoon Retreat", "rating": "4.8 ★", "price": "200 000 ₸", "image": "https://images.unsplash.com/photo-1626258607001-88235bc4aefd?q=80&w=736", "tags": "#ЛАГУНА #СПА", "desc": "Курорт рядом с геотермальной лагуной." },
+      { "name": "Northern Lights Inn", "rating": "4.6 ★", "price": "125 000 ₸", "image": "https://images.unsplash.com/photo-1521783988139-893ce3df0b45?q=80&w=400", "tags": "#АУРОРА #ПРИРОДА", "desc": "Лодж в уединённом месте для наблюдения северного сияния." }
+    ]
+  },
+  "costa-rica": {
+    "title": "КОСТА-РИКА",
+    "description": "<p><strong>Коста-Рика</strong> — центр экотуризма с тропическими лесами, вулканами и богатой биологической разнообразностью.</p>",
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500",
+    "seasonality": { "best": ["декабрь", "апрель"], "avoid": ["сентябрь"] },
+    "attractions": [
+      { "name": "Национальные парки", "type": "природа" },
+      { "name": "Вулканы", "type": "природа" }
+    ],
+    "hotels": [
+      { "name": "Rainforest Eco Lodge", "rating": "4.7 ★", "price": "95 000 ₸", "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400", "tags": "#ЭКО #ПРИРОДА", "desc": "Лодж в тропическом лесу с эко-экскурсией." },
+      { "name": "Pacific Coast Resort", "rating": "4.6 ★", "price": "110 000 ₸", "image": "https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500", "tags": "#ПЛЯЖ #ПРИРОДА", "desc": "Курорт на Тихоокеанском побережье с экскурсиями на природу." },
+      { "name": "Arenal Hot Springs Hotel", "rating": "4.5 ★", "price": "88 000 ₸", "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=400", "tags": "#ГОРИЗОНТЫ #СПА", "desc": "Отель рядом с термальными источниками и вулканом Ареналь." }
+    ]
+  }
 }

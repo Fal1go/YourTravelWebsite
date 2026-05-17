@@ -640,10 +640,35 @@ body {
 .attraction-item .atype { font-size:0.85rem; color:#666; margin-top:6px; }
 
 /* Smart recommendations on index */
-.smart-recommendations{ background:white; border:1px solid rgba(0,0,0,0.04); padding:12px 16px; border-radius:8px; margin: 18px 3%; max-width: 1200px; }
-.smart-recommendations h3{ margin:0 0 8px 0; }
-.smart-recommendations .rec-list{ display:flex; gap:12px; flex-wrap:wrap; }
-.smart-recommendations .rec-item{ padding:8px 10px; background:#f7fbff; border-radius:8px; cursor:pointer; border:1px solid rgba(0,0,0,0.04); }
+.smart-recommendations {
+    background: white;
+    border: 1px solid rgba(0,0,0,0.04);
+    padding: 12px 3%;
+    border-radius: 0;
+    margin: 18px 0;
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    text-align: left;
+}
+.smart-recommendations h3 {
+    margin: 0 0 8px 0;
+    text-align: left;
+}
+.smart-recommendations .rec-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.smart-recommendations .rec-item {
+    padding: 8px 10px;
+    background: #f7fbff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.04);
+}
 
 /* Price calendar & local guide */
 .price-calendar-widget{ background:white; border:1px solid rgba(0,0,0,0.04); padding:12px 16px; border-radius:8px; margin-top:12px; }

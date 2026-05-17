@@ -75,12 +75,10 @@ function initComments(hotel) {
         });
     }
 
-        function loadCommentsLocal() {
-        const initial = hotel.comments || [];
+    function loadCommentsLocal() {
         const raw = localStorage.getItem(key);
-        const localArr = raw ? JSON.parse(raw) : [];
-        const fullList = [...localArr, ...initial];
-        renderCommentList(fullList);
+        const arr = raw ? JSON.parse(raw) : [];
+        renderCommentList(arr);
     }
 
     // Default (localStorage) submit handler
