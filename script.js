@@ -52,163 +52,13 @@ if (logo){
     });
 }
 
-function initComments(hotel) {
-    const key = 'comments_' + encodeURIComponent(hotel.name);
-    const list = document.querySelector('.comments-list');
-    const form = document.getElementById('comment-form');
-    const nameInput = document.getElementById('comment-name');
-    const textInput = document.getElementById('comment-text');
-    if (!list || !form || !nameInput || !textInput) return;
-
-    function escapeHtml(s) {
-        return String(s).replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[m]; });
-    }
-
-    function renderCommentList(arr) {
-        list.innerHTML = '';
-        if (!arr || !arr.length) { list.innerHTML = '<div class="no-comments">Пока нет отзывов. Будьте первым!</div>'; return; }
-        arr.forEach(c => {
-            const div = document.createElement('div');
-            div.className = 'comment';
-            div.innerHTML = `<div class="comment-meta"><strong>${escapeHtml(c.name)}</strong> <span class="time">${new Date(c.time).toLocaleString()}</span></div><div class="comment-text">${escapeHtml(c.text)}</div>`;
-            list.appendChild(div);
-        });
-    }
-
-        function loadCommentsLocal() {
-        const initial = hotel.comments || [];
-        const raw = localStorage.getItem(key);
-        const localArr = raw ? JSON.parse(raw) : [];
-        const fullList = [...localArr, ...initial];
-        renderCommentList(fullList);
-    }
-
-    // Default (localStorage) submit handler
-    function defaultSubmitHandler(e) {
-        e.preventDefault();
-        const name = nameInput.value.trim() || 'Аноним';
-        const text = textInput.value.trim();
-        if (!text) return;
-        const raw = localStorage.getItem(key);
-        const arr = raw ? JSON.parse(raw) : [];
-        const comment = { name, text, time: new Date().toISOString() };
-        arr.unshift(comment);
-        try { localStorage.setItem(key, JSON.stringify(arr)); } catch (err) { /* ignore */ }
-        nameInput.value = '';
-        textInput.value = '';
-        renderCommentList(arr);
-    }
-
-    form.addEventListener('submit', defaultSubmitHandler);
-    loadCommentsLocal();
-
-    // load comments-config and optionally initialize external provider (Utterances or Firebase)
-    fetch('comments-config.json').then(r => { if (!r.ok) throw new Error('no config'); return r.json(); })
-    .then(cfg => {
-        if (!cfg) return;
-
-        // Utterances fallback (existing)
-        if (cfg.provider === 'utterances' && cfg.repo) {
-            const section = document.querySelector('.comments-section');
-            const externalId = 'external-comments';
-            if (section) {
-                let ext = section.querySelector('#' + externalId);
-                if (!ext) { ext = document.createElement('div'); ext.id = externalId; section.insertBefore(ext, section.querySelector('.comments-list')); }
-                if (!ext.querySelector('script[data-utterances]')) {
-                    const s = document.createElement('script');
-                    s.src = 'https://utteranc.es/client.js';
-                    s.async = true;
-                    s.setAttribute('repo', cfg.repo);
-                    s.setAttribute('issue-term', cfg['issue-term'] || 'pathname');
-                    if (cfg.label) s.setAttribute('label', cfg.label);
-                    s.setAttribute('theme', cfg.theme || 'github-light');
-                    s.setAttribute('data-utterances', 'true');
-                    s.crossOrigin = 'anonymous';
-                    ext.appendChild(s);
-                }
-                if (cfg.hideLocal) {
-                    if (form) form.style.display = 'none';
-                    if (list) list.style.display = 'none';
-                }
-            }
-        }
-
-        // Firebase provider
-        if (cfg.provider === 'firebase' && cfg.firebase && cfg.firebase.projectId) {
-            // load firebase compat SDKs if not present
-            const urls = [
-                'https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js',
-                'https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js',
-                'https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js'
-            ];
-            let loaded = 0;
-            function onLibLoaded(){ loaded++; if (loaded === urls.length) initFirebaseComments(cfg); }
-            urls.forEach(u => {
-                if (document.querySelector('script[src="' + u + '"]')) { onLibLoaded(); return; }
-                const s = document.createElement('script'); s.src = u; s.async = true; s.onload = onLibLoaded; s.onerror = () => { console.warn('Failed to load', u); onLibLoaded(); }; document.head.appendChild(s);
-            });
-
-            function initFirebaseComments(cfg) {
-                try {
-                    if (!window.firebase || !window.firebase.apps || !window.firebase.apps.length) {
-                        firebase.initializeApp(cfg.firebase);
-                    }
-                } catch (e) { console.warn('Firebase init error', e); }
-
-                const auth = firebase.auth();
-                const db = firebase.firestore();
-
-                // optionally sign in anonymously so we have a uid
-                const allowAnon = (cfg.allowAnonymous !== false);
-                if (allowAnon) {
-                    auth.signInAnonymously().catch(err => { console.warn('Firebase anonymous sign-in failed', err); });
-                }
-
-                // replace submit handler to write to Firestore
-                try { form.removeEventListener('submit', defaultSubmitHandler); } catch(e) {}
-                form.addEventListener('submit', function firebaseSubmitHandler(e){
-                    e.preventDefault();
-                    const name = nameInput.value.trim() || 'Аноним';
-                    const text = textInput.value.trim();
-                    if (!text) return;
-                    const comment = { hotel: hotel.name, name, text, time: new Date().toISOString(), uid: (auth.currentUser && auth.currentUser.uid) ? auth.currentUser.uid : null };
-                    db.collection('comments').add(comment).then(() => {
-                        nameInput.value = '';
-                        textInput.value = '';
-                    }).catch(err => {
-                        console.error('Failed to save comment to Firestore', err);
-                    });
-                });
-
-                // realtime listener for comments for this hotel
-                try {
-                    db.collection('comments').where('hotel','==',hotel.name).orderBy('time','desc').onSnapshot(snapshot => {
-                        const arr = [];
-                        snapshot.forEach(doc => {
-                            const data = doc.data();
-                            arr.push({ name: data.name || 'Аноним', text: data.text || '', time: (data.time && data.time.toDate) ? data.time.toDate().toISOString() : (data.time || new Date().toISOString()) });
-                        });
-                        renderCommentList(arr);
-                    }, err => { console.warn('Firestore listener error', err); loadCommentsLocal(); });
-                } catch (e) { console.warn('Failed to attach Firestore listener', e); loadCommentsLocal(); }
-
-                if (cfg.hideLocal) {
-                    // hide local storage fallback UI if requested
-                    if (list) list.style.display = 'none';
-                    if (form) form.style.display = 'none';
-                }
-            }
-        }
-    }).catch(() => {
-        // no external config or provider failed — keep local comments
-    });
-}
+// Get vacation type grid
 const countries = {
     culture: [
         {
             title: "ФРАНЦИЯ",
             code: "france",
-            img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=500",
+            img: "photos/France.jpg",
             desc: "Прогулки по Лувру, вечерние кафе и искусство на каждом шагу!"
         },
         {
@@ -220,7 +70,7 @@ const countries = {
         {
             title: "ГРЕЦИЯ",
             code: "greece",
-            img: "https://plus.unsplash.com/premium_photo-1675375678457-d70708bf77c8?w=500",
+            img: "photos/Greece.jpg",
             desc: "Исследуй античные храмы и почувствуй дух древних цивилизаций!"
         }
     ],
@@ -228,7 +78,7 @@ const countries = {
         {
             title: "TУРЦИЯ",
             code: "turkey",
-            img: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=500",
+            img: "photos/Turkey.jpg",
             desc: "Турция — наслаждайся пляжами, SPA и комфортом “всё включено”!"
         },
         {
@@ -240,7 +90,7 @@ const countries = {
         {
             title: "TАИЛАНД",
             code: "thailand",
-            img: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=500",
+            img: "photos/Thailand.jpg",
             desc: "Таиланд — отдыхай на тропических пляжах и пробуй экзотическую кухню!"
         }
     ],
@@ -248,19 +98,19 @@ const countries = {
         {
             title: "ШВЕЙЦАРИЯ",
             code: "switzerland",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/Switzerland.jpg",
             desc: "Катайся на лыжах и покоряй Альпы!"
         },
         {
             title: "НОРВЕГИЯ",
             code: "norway",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/Norway.jpg",
             desc: "Отправляйся в походы к Фьордам и смотри на северное сияние!"
         },
         {
             title: "НОВАЯ ЗЕЛАНДИЯ",
             code: "new zeland",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/New_zeland.jpg",
             desc: "Экстремальные приключения: от банджи до горных треков!"
         }
     ],
@@ -268,19 +118,19 @@ const countries = {
         {
             title: "США",
             code: "usa",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/USA.jpg",
             desc: "Посещай концерты, фестивали и масштабные шоу мирового уровня!"
         },
         {
             title: "ГЕРМАНИЯ",
             code: "germany",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/Germany.jpg",
             desc: "Участвуй в легендарных фестивалях и ярких праздниках!"
         },
         {
             title: "ЮЖНАЯ КОРЕЯЯ",
             code: "south-korea",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/South_korea.jpg",
             desc: "Будь на концертах K-pop и современных культурных событиях!"
         }
     ],
@@ -288,19 +138,19 @@ const countries = {
         {
             title: "КАНАДА",
             code: "canada",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/Canada.jpg",
             desc: "Гуляй по диким лесам, смотри на озёра и дикую природу!"
         },
         {
             title: "ИСЛАНДИЯ",
             code: "iceland",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/Iceland.jpg",
             desc: "Наблюдай вулканы, водопады и гейзеры!"
         },
         {
             title: "КОСTА-РИКА",
             code: "costa-rica",
-            img: "https://images.unsplash.com/photo-1677475191981-653bcfcc3cd2?q=80&w=1193",
+            img: "photos/Costa-rica.jpg",
             desc: "Исследуй джунгли и наблюдай редких животных в природе!"
         }
     ]
@@ -549,12 +399,10 @@ const isHotelPage = !!document.querySelector('.main-hotel-title');
 
 if (isHotelPage) {
     // Only load hotels data for the hotel page (avoid loading country details here)
-        fetch('hotels.json')
-            .then(r => r.json())
-            .then(hotels => {
-                    hotelsData = hotels || [];
-                    // seed initial comments (if none) so hotel pages show example reviews
-                    try { seedInitialComments(hotelsData); } catch(e) { /* ignore */ }
+    fetch('hotels.json')
+      .then(r => r.json())
+      .then(hotels => {
+          hotelsData = hotels || [];
           // restore compare selection (names) from localStorage
           try {
               const stored = JSON.parse(localStorage.getItem('compare_names') || '[]');
@@ -668,8 +516,6 @@ if (isHotelPage) {
         countriesJsonData = countriesJson || {};
         localGuidesData = localGuides || {};
         hotelsData = hotels || [];
-        // seed initial comments (if none) so hotels have starter reviews
-        try { seedInitialComments(hotelsData); } catch(e) { /* ignore */ }
 
             if (countryName && countriesJson[countryName]) {
             const country = countriesJson[countryName];
@@ -926,45 +772,6 @@ function initComments(hotel) {
     });
 
     loadComments();
-
-    // Try loading external comments provider (Utterances) if configured
-    fetch('comments-config.json').then(r => {
-        if (!r.ok) throw new Error('no config');
-        return r.json();
-    }).then(cfg => {
-        if (cfg && cfg.provider === 'utterances' && cfg.repo) {
-            const section = document.querySelector('.comments-section');
-            const externalId = 'external-comments';
-            if (section) {
-                // create container for external widget before local list
-                let ext = section.querySelector('#' + externalId);
-                if (!ext) {
-                    ext = document.createElement('div');
-                    ext.id = externalId;
-                    section.insertBefore(ext, section.querySelector('.comments-list'));
-                }
-                // avoid inserting multiple scripts
-                if (!ext.querySelector('script[data-utterances]')) {
-                    const s = document.createElement('script');
-                    s.src = 'https://utteranc.es/client.js';
-                    s.async = true;
-                    s.setAttribute('repo', cfg.repo);
-                    s.setAttribute('issue-term', cfg['issue-term'] || 'pathname');
-                    if (cfg.label) s.setAttribute('label', cfg.label);
-                    s.setAttribute('theme', cfg.theme || 'github-light');
-                    s.setAttribute('data-utterances', 'true');
-                    s.crossOrigin = 'anonymous';
-                    ext.appendChild(s);
-                }
-                if (cfg.hideLocal) {
-                    if (form) form.style.display = 'none';
-                    if (list) list.style.display = 'none';
-                }
-            }
-        }
-    }).catch(() => {
-        // no external config, keep local comments
-    });
 }
 
 // Render a compact offers block below the hero: grouped by hotel `level`, showing sample hotels
@@ -1009,50 +816,6 @@ function getPriceExamplesForGroup(hotels) {
     }
     const uniq = [...new Set(prices)];
     return uniq.slice(0,3).join(' / ');
-}
-
-// Seed initial comments for hotels across different countries if none exist in localStorage
-function seedInitialComments(hotels) {
-    if (!hotels || !hotels.length) return 0;
-    const names = ['Марина', 'Мадина', 'Милана'];
-    const samples = [
-        'Очень понравился сервис и чистота в номере. Рекомендую!',
-        'Удобное расположение и дружелюбный персонал. Отличный вариант для путешествия.',
-        'Прекрасный завтрак и уютные номера, вернусь ещё раз.'
-    ];
-    const byCountry = {};
-    hotels.forEach(h => {
-        const cc = (h.country_code || '').toString();
-        if (!cc) return;
-        if (!byCountry[cc]) byCountry[cc] = [];
-        byCountry[cc].push(h);
-    });
-
-    let added = 0;
-    const countryCodes = Object.keys(byCountry);
-    countryCodes.forEach((cc, idx) => {
-        const list = byCountry[cc];
-        if (!list || !list.length) return;
-        const hotel = list[0]; // seed first hotel in the country
-        const key = 'comments_' + encodeURIComponent(hotel.name);
-        try {
-            const existing = JSON.parse(localStorage.getItem(key) || 'null');
-            if (existing && existing.length) return; // don't overwrite
-        } catch (e) {
-            // continue to seed
-        }
-        const author = names[idx % names.length];
-        const text = samples[idx % samples.length];
-        const time = new Date(Date.now() - (idx % 5) * 24 * 60 * 60 * 1000).toISOString();
-        const comment = { name: author, text, time };
-        try {
-            localStorage.setItem(key, JSON.stringify([comment]));
-            added++;
-        } catch (e) {
-            // ignore storage errors
-        }
-    });
-    return added;
 }
 
 // ------------------ Search / Filtering ------------------
@@ -1151,17 +914,6 @@ function renderPriceCalendar(countryCode, hotelsForCountry) {
     const results = widget.querySelector('#price-results');
     if (!dateInput || !results) return;
 
-    // prevent selecting past dates (yesterday and earlier)
-    function formatDateForInput(d) {
-        const yyyy = d.getFullYear();
-        const mm = String(d.getMonth() + 1).padStart(2, '0');
-        const dd = String(d.getDate()).padStart(2, '0');
-        return `${yyyy}-${mm}-${dd}`;
-    }
-    const today = new Date();
-    const minDateStr = formatDateForInput(today);
-    try { dateInput.setAttribute('min', minDateStr); } catch(e) { /* ignore */ }
-
     function updatePricesForDate(d) {
         const dt = d || new Date();
         const monthName = getMonthNameFromDate(dt);
@@ -1190,26 +942,15 @@ function renderPriceCalendar(countryCode, hotelsForCountry) {
         });
     }
 
-    // set default date to today if empty; ensure it's not before min
+    // set default date to today if empty
     if (!dateInput.value) {
-        dateInput.value = minDateStr;
+        const today = new Date();
+        dateInput.valueAsDate = today;
     }
-    // clamp if user or code somehow set an earlier date
-    try {
-        const selected = dateInput.valueAsDate || new Date(dateInput.value);
-        if (selected < new Date(minDateStr)) dateInput.value = minDateStr;
-    } catch (e) { /* ignore parsing issues */ }
-
     // initial render
-    updatePricesForDate(dateInput.valueAsDate || new Date(dateInput.value));
+    updatePricesForDate(dateInput.valueAsDate || new Date());
     dateInput.addEventListener('change', (e) => {
         const d = e.target.valueAsDate || new Date(e.target.value);
-        // if selected date is before min, reset to min
-        if (d < new Date(minDateStr)) {
-            dateInput.value = minDateStr;
-            updatePricesForDate(new Date(minDateStr));
-            return;
-        }
         updatePricesForDate(d);
     });
 }
